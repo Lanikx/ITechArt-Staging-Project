@@ -1,0 +1,82 @@
+{
+  "uuid": "d42de6bd-11db-461d-b5ac-572109e5f048-tr-0-1009",
+  "historyId": "Staging_project.Tests.Positive.CoolTests.MainPageBookStoreTest",
+  "fullName": "Staging_project.Tests.Positive.CoolTests.MainPageBookStoreTest",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#1"
+    },
+    {
+      "name": "host",
+      "value": "WIN-50H9I8HAI83"
+    },
+    {
+      "name": "testClass",
+      "value": "Staging_project.Tests.Positive.CoolTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "MainPageBookStoreTest"
+    },
+    {
+      "name": "package",
+      "value": "Staging_project.Tests.Positive.CoolTests"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "owner",
+      "value": "Nikita Lapin"
+    }
+  ],
+  "links": [
+    {
+      "name": "ISSUE-1",
+      "url": "https://github.com/nunit/docs/issues?utf8=%E2%9C%93&q=ISSUE-1",
+      "type": "issue"
+    }
+  ],
+  "name": "MainPageBookStoreTest",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "MainPageBookStoreTest"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "MainPageBookStoreTest",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "5614330afe094557a06f68ce198db1c5-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1628855680729,
+      "stop": 1628855685489
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1628855680728,
+  "stop": 1628855685489
+}

@@ -1,0 +1,95 @@
+{
+  "uuid": "798385e4-0431-44c8-9abe-640de74f155c-tr-0-1016",
+  "historyId": "Staging_project.Tests.Negative.HotTests.StudentRegistrationNameInput(\"hgZLVAya\",\"\",\"\")",
+  "fullName": "Staging_project.Tests.Negative.HotTests.StudentRegistrationNameInput(\"hgZLVAya\",\"\",\"\")",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#3"
+    },
+    {
+      "name": "host",
+      "value": "WIN-50H9I8HAI83"
+    },
+    {
+      "name": "testClass",
+      "value": "Staging_project.Tests.Negative.HotTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "StudentRegistrationNameInput"
+    },
+    {
+      "name": "package",
+      "value": "Staging_project.Tests.Negative.HotTests"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "owner",
+      "value": "Nikita Lapin"
+    }
+  ],
+  "links": [
+    {
+      "name": "ISSUE-1",
+      "url": "https://github.com/nunit/docs/issues?utf8=%E2%9C%93&q=ISSUE-1",
+      "type": "issue"
+    }
+  ],
+  "name": "StudentRegistrationNameInput(\"hgZLVAya\",\"\",\"\")",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "StudentRegistrationNameInput(\"hgZLVAya\",\"\",\"\")"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "StudentRegistrationNameInput(\"hgZLVAya\",\"\",\"\")",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "fc2d382af3e14480adc62852c8db4764-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1629365804293,
+      "stop": 1629365807986
+    }
+  ],
+  "attachments": [],
+  "parameters": [
+    {
+      "name": "Param #0",
+      "value": "hgZLVAya"
+    },
+    {
+      "name": "Param #1",
+      "value": ""
+    },
+    {
+      "name": "Param #2",
+      "value": ""
+    }
+  ],
+  "start": 1629365804293,
+  "stop": 1629365807986
+}

@@ -1,0 +1,82 @@
+{
+  "uuid": "1ac1288f-4def-4c5b-b1bd-714c876c5a01-tr-0-1012",
+  "historyId": "Staging_project.Tests.Negative.HotTests.LoginPageNoInputTest",
+  "fullName": "Staging_project.Tests.Negative.HotTests.LoginPageNoInputTest",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#2"
+    },
+    {
+      "name": "host",
+      "value": "WIN-50H9I8HAI83"
+    },
+    {
+      "name": "testClass",
+      "value": "Staging_project.Tests.Negative.HotTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "LoginPageNoInputTest"
+    },
+    {
+      "name": "package",
+      "value": "Staging_project.Tests.Negative.HotTests"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "owner",
+      "value": "Nikita Lapin"
+    }
+  ],
+  "links": [
+    {
+      "name": "ISSUE-1",
+      "url": "https://github.com/nunit/docs/issues?utf8=%E2%9C%93&q=ISSUE-1",
+      "type": "issue"
+    }
+  ],
+  "name": "LoginPageNoInputTest",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "LoginPageNoInputTest"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "LoginPageNoInputTest",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "874249c5b1d3459db6002c2ffd320e4e-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1628855680729,
+      "stop": 1628855683756
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1628855680728,
+  "stop": 1628855683761
+}

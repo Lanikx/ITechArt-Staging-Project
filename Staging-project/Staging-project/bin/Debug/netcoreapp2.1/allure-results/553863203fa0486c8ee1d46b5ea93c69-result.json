@@ -1,0 +1,85 @@
+{
+  "uuid": "bd7e9791-0c04-4960-b6e0-f0ff8ed82ee5-tr-0-1002",
+  "historyId": "Staging_project.Tests.Positive.CoolTests.TextBoxEnterTest",
+  "fullName": "Staging_project.Tests.Positive.CoolTests.TextBoxEnterTest",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#1"
+    },
+    {
+      "name": "host",
+      "value": "WIN-50H9I8HAI83"
+    },
+    {
+      "name": "testClass",
+      "value": "Staging_project.Tests.Positive.CoolTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "TextBoxEnterTest"
+    },
+    {
+      "name": "package",
+      "value": "Staging_project.Tests.Positive.CoolTests"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "owner",
+      "value": "Nikita Lapin"
+    }
+  ],
+  "links": [
+    {
+      "name": "ISSUE-1",
+      "url": "https://github.com/nunit/docs/issues?utf8=%E2%9C%93&q=ISSUE-1",
+      "type": "issue"
+    }
+  ],
+  "name": "TextBoxEnterTest",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.ElementClickInterceptedException : element click intercepted: Element <button id=\"submit\" type=\"button\" class=\"btn btn-primary\">...</button> is not clickable at point (572, 581). Other element would receive the click: <footer>...</footer>\n  (Session info: headless chrome=92.0.4515.159)",
+    "trace": "   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)\r\n   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.Remote.RemoteWebElement.Click()\r\n   at Staging_project.PageObjects.TextBoxPage.PressSubmit() in E:\\itech\\ITechArt-Staging-Project\\Staging-project\\Staging-project\\PageObjects\\TextBoxPage.cs:line 59\r\n   at Staging_project.Tests.Positive.CoolTests.TextBoxEnterTest() in E:\\itech\\ITechArt-Staging-Project\\Staging-project\\Staging-project\\Tests\\Positive\\CoolTests.cs:line 42"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "TextBoxEnterTest",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.ElementClickInterceptedException : element click intercepted: Element <button id=\"submit\" type=\"button\" class=\"btn btn-primary\">...</button> is not clickable at point (572, 581). Other element would receive the click: <footer>...</footer>\n  (Session info: headless chrome=92.0.4515.159)",
+        "trace": "   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)\r\n   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.Remote.RemoteWebElement.Click()\r\n   at Staging_project.PageObjects.TextBoxPage.PressSubmit() in E:\\itech\\ITechArt-Staging-Project\\Staging-project\\Staging-project\\PageObjects\\TextBoxPage.cs:line 59\r\n   at Staging_project.Tests.Positive.CoolTests.TextBoxEnterTest() in E:\\itech\\ITechArt-Staging-Project\\Staging-project\\Staging-project\\Tests\\Positive\\CoolTests.cs:line 42"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "cda1a609b1dc4c289a291b22fd852084-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1629365801043,
+      "stop": 1629365805905
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1629365801043,
+  "stop": 1629365805905
+}

@@ -1,0 +1,82 @@
+{
+  "uuid": "3c16342d-e275-415a-b832-1f6dc31f930d-tr-0-1001",
+  "historyId": "Staging_project.Tests.Positive.CoolTests.PromptBoxAlertTest",
+  "fullName": "Staging_project.Tests.Positive.CoolTests.PromptBoxAlertTest",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#6"
+    },
+    {
+      "name": "host",
+      "value": "WIN-50H9I8HAI83"
+    },
+    {
+      "name": "testClass",
+      "value": "Staging_project.Tests.Positive.CoolTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "PromptBoxAlertTest"
+    },
+    {
+      "name": "package",
+      "value": "Staging_project.Tests.Positive.CoolTests"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "owner",
+      "value": "Nikita Lapin"
+    }
+  ],
+  "links": [
+    {
+      "name": "ISSUE-1",
+      "url": "https://github.com/nunit/docs/issues?utf8=%E2%9C%93&q=ISSUE-1",
+      "type": "issue"
+    }
+  ],
+  "name": "PromptBoxAlertTest",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "PromptBoxAlertTest"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "PromptBoxAlertTest",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "cca74cc5413b47a99100fb7d8af9fab3-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1629375788619,
+      "stop": 1629375791287
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1629375788619,
+  "stop": 1629375791287
+}

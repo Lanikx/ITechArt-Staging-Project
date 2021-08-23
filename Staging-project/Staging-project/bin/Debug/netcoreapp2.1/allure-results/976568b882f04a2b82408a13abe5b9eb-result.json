@@ -1,0 +1,95 @@
+{
+  "uuid": "986a7218-8ce3-49ca-8aa6-a0dd100476ee-tr-0-1016",
+  "historyId": "Staging_project.Tests.Negative.HotTests.StudentRegistrationNameInput(\"pxcO87ba\",\"\",\"\")",
+  "fullName": "Staging_project.Tests.Negative.HotTests.StudentRegistrationNameInput(\"pxcO87ba\",\"\",\"\")",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "15"
+    },
+    {
+      "name": "host",
+      "value": "WIN-50H9I8HAI83"
+    },
+    {
+      "name": "testClass",
+      "value": "Staging_project.Tests.Negative.HotTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "StudentRegistrationNameInput"
+    },
+    {
+      "name": "package",
+      "value": "Staging_project.Tests.Negative.HotTests"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "owner",
+      "value": "Nikita Lapin"
+    }
+  ],
+  "links": [
+    {
+      "name": "ISSUE-1",
+      "url": "https://github.com/nunit/docs/issues?utf8=%E2%9C%93&q=ISSUE-1",
+      "type": "issue"
+    }
+  ],
+  "name": "StudentRegistrationNameInput(\"pxcO87ba\",\"\",\"\")",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "StudentRegistrationNameInput(\"pxcO87ba\",\"\",\"\")"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "StudentRegistrationNameInput(\"pxcO87ba\",\"\",\"\")",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "684e3d70099a4e2c8a69dade6603246e-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1629287438340,
+      "stop": 1629287441778
+    }
+  ],
+  "attachments": [],
+  "parameters": [
+    {
+      "name": "Param #0",
+      "value": "pxcO87ba"
+    },
+    {
+      "name": "Param #1",
+      "value": ""
+    },
+    {
+      "name": "Param #2",
+      "value": ""
+    }
+  ],
+  "start": 1629287438340,
+  "stop": 1629287441779
+}

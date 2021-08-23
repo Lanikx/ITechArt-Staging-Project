@@ -1,0 +1,82 @@
+{
+  "uuid": "6afce7a6-0fa2-4405-ad75-8514979778c5-tr-0-1011",
+  "historyId": "Staging_project.Tests.Negative.HotTests.RegistrationFormNoInput",
+  "fullName": "Staging_project.Tests.Negative.HotTests.RegistrationFormNoInput",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "15"
+    },
+    {
+      "name": "host",
+      "value": "WIN-50H9I8HAI83"
+    },
+    {
+      "name": "testClass",
+      "value": "Staging_project.Tests.Negative.HotTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "RegistrationFormNoInput"
+    },
+    {
+      "name": "package",
+      "value": "Staging_project.Tests.Negative.HotTests"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "owner",
+      "value": "Nikita Lapin"
+    }
+  ],
+  "links": [
+    {
+      "name": "ISSUE-1",
+      "url": "https://github.com/nunit/docs/issues?utf8=%E2%9C%93&q=ISSUE-1",
+      "type": "issue"
+    }
+  ],
+  "name": "RegistrationFormNoInput",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "RegistrationFormNoInput"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "RegistrationFormNoInput",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "24dc457aa3274dad831d181963693af5-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1629287429005,
+      "stop": 1629287431777
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1629287429005,
+  "stop": 1629287431777
+}

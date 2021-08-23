@@ -1,0 +1,82 @@
+{
+  "uuid": "63421cf0-8781-4617-8a0c-b8e2795b5224-tr-0-1014",
+  "historyId": "Staging_project.Tests.Negative.HotTests.StudentRegistrationNameInput",
+  "fullName": "Staging_project.Tests.Negative.HotTests.StudentRegistrationNameInput",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#6"
+    },
+    {
+      "name": "host",
+      "value": "WIN-50H9I8HAI83"
+    },
+    {
+      "name": "testClass",
+      "value": "Staging_project.Tests.Negative.HotTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "StudentRegistrationNameInput"
+    },
+    {
+      "name": "package",
+      "value": "Staging_project.Tests.Negative.HotTests"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "owner",
+      "value": "Nikita Lapin"
+    }
+  ],
+  "links": [
+    {
+      "name": "ISSUE-1",
+      "url": "https://github.com/nunit/docs/issues?utf8=%E2%9C%93&q=ISSUE-1",
+      "type": "issue"
+    }
+  ],
+  "name": "StudentRegistrationNameInput",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "StudentRegistrationNameInput"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "StudentRegistrationNameInput",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "7540e198b093478e9496b8fb103809fa-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1629392221234,
+      "stop": 1629392224369
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1629392221234,
+  "stop": 1629392224369
+}

@@ -1,0 +1,59 @@
+{
+  "uuid": "3e4c7b53-dd93-43c2-bcb7-b804fe38fe7c-tc-0-1000",
+  "name": "Staging_project.Tests.Positive.CoolTests.MainPageElementsTest",
+  "children": [
+    "fc037280-8e7a-4d1a-b931-392763e260be-tr-0-1004"
+  ],
+  "befores": [
+    {
+      "name": "AndHereItGoes",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1629712775144,
+      "stop": 1629712775144
+    },
+    {
+      "name": "AhShitHereWeGoAgain",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1629712775144,
+      "stop": 1629712775144
+    }
+  ],
+  "afters": [
+    {
+      "name": "YouHadToFollowTheDamnTrainCJ",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1629712775144,
+      "stop": 1629712775144
+    }
+  ],
+  "links": [],
+  "start": 1629712768544,
+  "stop": 1629712775145
+}

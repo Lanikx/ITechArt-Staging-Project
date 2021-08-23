@@ -1,0 +1,59 @@
+{
+  "uuid": "c619e508-95cd-4502-bb11-197443972558-tc-0-1010",
+  "name": "Staging_project.Tests.Negative.HotTests.StudentRegistrationNameInput(\"XV6c4lGR\",\"\",\"\")",
+  "children": [
+    "20a3aca9-df34-438d-bc1c-247daac14858-tr-0-1016"
+  ],
+  "befores": [
+    {
+      "name": "AndHereItGoes",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1629195365733,
+      "stop": 1629195365733
+    },
+    {
+      "name": "AhShitHereWeGoAgain",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1629195365733,
+      "stop": 1629195365733
+    }
+  ],
+  "afters": [
+    {
+      "name": "YouHadToFollowTheDamnTrainCJ",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1629195365733,
+      "stop": 1629195365733
+    }
+  ],
+  "links": [],
+  "start": 1629195362130,
+  "stop": 1629195365734
+}

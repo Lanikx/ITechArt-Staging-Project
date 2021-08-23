@@ -1,0 +1,82 @@
+{
+  "uuid": "194210f6-429f-44fe-8a3a-c7bbe0df895e-tr-0-1006",
+  "historyId": "Staging_project.Tests.Positive.CoolTests.MainPageAlertsFramesWindowsTest",
+  "fullName": "Staging_project.Tests.Positive.CoolTests.MainPageAlertsFramesWindowsTest",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#6"
+    },
+    {
+      "name": "host",
+      "value": "WIN-50H9I8HAI83"
+    },
+    {
+      "name": "testClass",
+      "value": "Staging_project.Tests.Positive.CoolTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "MainPageAlertsFramesWindowsTest"
+    },
+    {
+      "name": "package",
+      "value": "Staging_project.Tests.Positive.CoolTests"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "owner",
+      "value": "Nikita Lapin"
+    }
+  ],
+  "links": [
+    {
+      "name": "ISSUE-1",
+      "url": "https://github.com/nunit/docs/issues?utf8=%E2%9C%93&q=ISSUE-1",
+      "type": "issue"
+    }
+  ],
+  "name": "MainPageAlertsFramesWindowsTest",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "MainPageAlertsFramesWindowsTest"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "MainPageAlertsFramesWindowsTest",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "d5ab6808561d4b05bcd1fb2f3c5a1d7c-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1629365796310,
+      "stop": 1629365800592
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1629365796310,
+  "stop": 1629365800592
+}

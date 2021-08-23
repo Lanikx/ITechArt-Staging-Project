@@ -1,0 +1,82 @@
+{
+  "uuid": "88c1369c-a41c-4cd7-9961-0d5ac5e5006c-tr-0-1003",
+  "historyId": "Staging_project.Tests.Positive.CoolTests.PracticeFormTest",
+  "fullName": "Staging_project.Tests.Positive.CoolTests.PracticeFormTest",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#4"
+    },
+    {
+      "name": "host",
+      "value": "WIN-50H9I8HAI83"
+    },
+    {
+      "name": "testClass",
+      "value": "Staging_project.Tests.Positive.CoolTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "PracticeFormTest"
+    },
+    {
+      "name": "package",
+      "value": "Staging_project.Tests.Positive.CoolTests"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "owner",
+      "value": "Nikita Lapin"
+    }
+  ],
+  "links": [
+    {
+      "name": "ISSUE-1",
+      "url": "https://github.com/nunit/docs/issues?utf8=%E2%9C%93&q=ISSUE-1",
+      "type": "issue"
+    }
+  ],
+  "name": "PracticeFormTest",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "PracticeFormTest"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "PracticeFormTest",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "7b85a89a267d4a859389a5ed29926eb5-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1629375627169,
+      "stop": 1629375632228
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1629375627169,
+  "stop": 1629375632228
+}

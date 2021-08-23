@@ -1,0 +1,82 @@
+{
+  "uuid": "db6c829e-9629-4aa4-a623-34c25801376d-tr-0-1008",
+  "historyId": "Staging_project.Tests.Positive.CoolTests.MainPageInteractionsTest",
+  "fullName": "Staging_project.Tests.Positive.CoolTests.MainPageInteractionsTest",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#3"
+    },
+    {
+      "name": "host",
+      "value": "WIN-50H9I8HAI83"
+    },
+    {
+      "name": "testClass",
+      "value": "Staging_project.Tests.Positive.CoolTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "MainPageInteractionsTest"
+    },
+    {
+      "name": "package",
+      "value": "Staging_project.Tests.Positive.CoolTests"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "owner",
+      "value": "Nikita Lapin"
+    }
+  ],
+  "links": [
+    {
+      "name": "ISSUE-1",
+      "url": "https://github.com/nunit/docs/issues?utf8=%E2%9C%93&q=ISSUE-1",
+      "type": "issue"
+    }
+  ],
+  "name": "MainPageInteractionsTest",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "MainPageInteractionsTest"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "MainPageInteractionsTest",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "ad9df896d49940a0aad29ca15330e7e2-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1629712769506,
+      "stop": 1629712772879
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1629712769506,
+  "stop": 1629712772879
+}

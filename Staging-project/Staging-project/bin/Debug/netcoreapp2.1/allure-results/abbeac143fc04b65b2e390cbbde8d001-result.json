@@ -1,0 +1,82 @@
+{
+  "uuid": "16e45720-af84-4416-a150-561998d9ad3c-tr-0-1005",
+  "historyId": "Staging_project.Tests.Positive.CoolTests.MainPageFormsTest",
+  "fullName": "Staging_project.Tests.Positive.CoolTests.MainPageFormsTest",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#1"
+    },
+    {
+      "name": "host",
+      "value": "WIN-50H9I8HAI83"
+    },
+    {
+      "name": "testClass",
+      "value": "Staging_project.Tests.Positive.CoolTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "MainPageFormsTest"
+    },
+    {
+      "name": "package",
+      "value": "Staging_project.Tests.Positive.CoolTests"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "owner",
+      "value": "Nikita Lapin"
+    }
+  ],
+  "links": [
+    {
+      "name": "ISSUE-1",
+      "url": "https://github.com/nunit/docs/issues?utf8=%E2%9C%93&q=ISSUE-1",
+      "type": "issue"
+    }
+  ],
+  "name": "MainPageFormsTest",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "MainPageFormsTest"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "MainPageFormsTest",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "ab41369bf1fc404ba532b4391b8431da-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1629379534465,
+      "stop": 1629379540079
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1629379534464,
+  "stop": 1629379540079
+}

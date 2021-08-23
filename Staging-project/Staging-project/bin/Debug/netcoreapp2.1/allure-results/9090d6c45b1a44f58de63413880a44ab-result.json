@@ -1,0 +1,82 @@
+{
+  "uuid": "dc290d95-0ea7-413d-974c-d27c6c42c8eb-tr-0-1002",
+  "historyId": "Staging_project.Tests.Positive.CoolTests.TextBoxEnterTest",
+  "fullName": "Staging_project.Tests.Positive.CoolTests.TextBoxEnterTest",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#2"
+    },
+    {
+      "name": "host",
+      "value": "WIN-50H9I8HAI83"
+    },
+    {
+      "name": "testClass",
+      "value": "Staging_project.Tests.Positive.CoolTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "TextBoxEnterTest"
+    },
+    {
+      "name": "package",
+      "value": "Staging_project.Tests.Positive.CoolTests"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "owner",
+      "value": "Nikita Lapin"
+    }
+  ],
+  "links": [
+    {
+      "name": "ISSUE-1",
+      "url": "https://github.com/nunit/docs/issues?utf8=%E2%9C%93&q=ISSUE-1",
+      "type": "issue"
+    }
+  ],
+  "name": "TextBoxEnterTest",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "TextBoxEnterTest"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "TextBoxEnterTest",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "d3cce96a6d4341c29eb151942250cd7a-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1629379540238,
+      "stop": 1629379544143
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1629379540238,
+  "stop": 1629379544143
+}

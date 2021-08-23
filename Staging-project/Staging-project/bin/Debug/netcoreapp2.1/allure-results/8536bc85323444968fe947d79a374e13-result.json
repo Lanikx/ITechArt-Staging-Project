@@ -1,0 +1,85 @@
+{
+  "uuid": "95a86e32-8066-4387-b8d3-3a3ff623356d-tr-0-1009",
+  "historyId": "Staging_project.Tests.Positive.CoolTests.MainPageBookStoreTest",
+  "fullName": "Staging_project.Tests.Positive.CoolTests.MainPageBookStoreTest",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#3"
+    },
+    {
+      "name": "host",
+      "value": "WIN-50H9I8HAI83"
+    },
+    {
+      "name": "testClass",
+      "value": "Staging_project.Tests.Positive.CoolTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "MainPageBookStoreTest"
+    },
+    {
+      "name": "package",
+      "value": "Staging_project.Tests.Positive.CoolTests"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "owner",
+      "value": "Nikita Lapin"
+    }
+  ],
+  "links": [
+    {
+      "name": "ISSUE-1",
+      "url": "https://github.com/nunit/docs/issues?utf8=%E2%9C%93&q=ISSUE-1",
+      "type": "issue"
+    }
+  ],
+  "name": "MainPageBookStoreTest",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#botton\\-text\\-10\"}\n  (Session info: headless chrome=92.0.4515.159)",
+    "trace": "   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)\r\n   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)\r\n   at Staging_project.Helpers.PageActing.ScrollDown(IWebDriver driver) in E:\\itech\\ITechArt-Staging-Project\\Staging-project\\Staging-project\\Helpers\\PageActing.cs:line 11\r\n   at Staging_project.PageObjects.BasePage..ctor(IWebDriver driver, String pageUrl) in E:\\itech\\ITechArt-Staging-Project\\Staging-project\\Staging-project\\PageObjects\\BasePage.cs:line 15\r\n   at Staging_project.PageObjects.MainPage..ctor(IWebDriver driver) in E:\\itech\\ITechArt-Staging-Project\\Staging-project\\Staging-project\\PageObjects\\MainPage.cs:line 11\r\n   at Staging_project.Tests.Positive.CoolTests.MainPageBookStoreTest() in E:\\itech\\ITechArt-Staging-Project\\Staging-project\\Staging-project\\Tests\\Positive\\CoolTests.cs:line 140"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "MainPageBookStoreTest",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#botton\\-text\\-10\"}\n  (Session info: headless chrome=92.0.4515.159)",
+        "trace": "   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)\r\n   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)\r\n   at Staging_project.Helpers.PageActing.ScrollDown(IWebDriver driver) in E:\\itech\\ITechArt-Staging-Project\\Staging-project\\Staging-project\\Helpers\\PageActing.cs:line 11\r\n   at Staging_project.PageObjects.BasePage..ctor(IWebDriver driver, String pageUrl) in E:\\itech\\ITechArt-Staging-Project\\Staging-project\\Staging-project\\PageObjects\\BasePage.cs:line 15\r\n   at Staging_project.PageObjects.MainPage..ctor(IWebDriver driver) in E:\\itech\\ITechArt-Staging-Project\\Staging-project\\Staging-project\\PageObjects\\MainPage.cs:line 11\r\n   at Staging_project.Tests.Positive.CoolTests.MainPageBookStoreTest() in E:\\itech\\ITechArt-Staging-Project\\Staging-project\\Staging-project\\Tests\\Positive\\CoolTests.cs:line 140"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "c43bb4f41d0b430faaea685ca1e0e78b-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1629375623782,
+      "stop": 1629375627859
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1629375623782,
+  "stop": 1629375627859
+}

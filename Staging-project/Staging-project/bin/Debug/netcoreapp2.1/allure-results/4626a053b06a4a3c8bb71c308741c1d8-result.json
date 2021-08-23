@@ -1,0 +1,85 @@
+{
+  "uuid": "62896cf3-34ec-4b60-9365-510f2bc82122-tr-0-1004",
+  "historyId": "Staging_project.Tests.Positive.CoolTests.MainPageElementsTest",
+  "fullName": "Staging_project.Tests.Positive.CoolTests.MainPageElementsTest",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#3"
+    },
+    {
+      "name": "host",
+      "value": "WIN-50H9I8HAI83"
+    },
+    {
+      "name": "testClass",
+      "value": "Staging_project.Tests.Positive.CoolTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "MainPageElementsTest"
+    },
+    {
+      "name": "package",
+      "value": "Staging_project.Tests.Positive.CoolTests"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "owner",
+      "value": "Nikita Lapin"
+    }
+  ],
+  "links": [
+    {
+      "name": "ISSUE-1",
+      "url": "https://github.com/nunit/docs/issues?utf8=%E2%9C%93&q=ISSUE-1",
+      "type": "issue"
+    }
+  ],
+  "name": "MainPageElementsTest",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.ElementClickInterceptedException : element click intercepted: Element <div class=\"card mt-4 top-card\">...</div> is not clickable at point (197, 522). Other element would receive the click: <iframe id=\"google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0\" title=\"3rd party ad content\" name=\"google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0\" width=\"728\" height=\"90\" scrolling=\"no\" marginwidth=\"0\" marginheight=\"0\" frameborder=\"0\" sandbox=\"allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation\" allow=\"attribution-reporting\" srcdoc=\"\" style=\"border: 0px; vertical-align: bottom;\" data-google-container-id=\"1\" data-load-complete=\"true\"></iframe>\n  (Session info: headless chrome=92.0.4515.159)",
+    "trace": "   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)\r\n   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.Remote.RemoteWebElement.Click()\r\n   at Staging_project.PageObjects.MainPage.ClickElementsButton() in E:\\itech\\ITechArt-Staging-Project\\Staging-project\\Staging-project\\PageObjects\\MainPage.cs:line 21\r\n   at Staging_project.Tests.Positive.CoolTests.MainPageElementsTest() in E:\\itech\\ITechArt-Staging-Project\\Staging-project\\Staging-project\\Tests\\Positive\\CoolTests.cs:line 75"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "MainPageElementsTest",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.ElementClickInterceptedException : element click intercepted: Element <div class=\"card mt-4 top-card\">...</div> is not clickable at point (197, 522). Other element would receive the click: <iframe id=\"google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0\" title=\"3rd party ad content\" name=\"google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0\" width=\"728\" height=\"90\" scrolling=\"no\" marginwidth=\"0\" marginheight=\"0\" frameborder=\"0\" sandbox=\"allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation\" allow=\"attribution-reporting\" srcdoc=\"\" style=\"border: 0px; vertical-align: bottom;\" data-google-container-id=\"1\" data-load-complete=\"true\"></iframe>\n  (Session info: headless chrome=92.0.4515.159)",
+        "trace": "   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)\r\n   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.Remote.RemoteWebElement.Click()\r\n   at Staging_project.PageObjects.MainPage.ClickElementsButton() in E:\\itech\\ITechArt-Staging-Project\\Staging-project\\Staging-project\\PageObjects\\MainPage.cs:line 21\r\n   at Staging_project.Tests.Positive.CoolTests.MainPageElementsTest() in E:\\itech\\ITechArt-Staging-Project\\Staging-project\\Staging-project\\Tests\\Positive\\CoolTests.cs:line 75"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "45c5d73ffdc9494db52fb8429a027df8-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1629375783878,
+      "stop": 1629375788625
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1629375783878,
+  "stop": 1629375788625
+}

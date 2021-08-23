@@ -1,0 +1,95 @@
+{
+  "uuid": "dc522e9d-3e8e-475e-a928-2db2bd31251c-tr-0-1014",
+  "historyId": "Staging_project.Tests.Negative.HotTests.StudentRegistrationNameInput(\"\",\"\",\"40710084\")",
+  "fullName": "Staging_project.Tests.Negative.HotTests.StudentRegistrationNameInput(\"\",\"\",\"40710084\")",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "15"
+    },
+    {
+      "name": "host",
+      "value": "WIN-50H9I8HAI83"
+    },
+    {
+      "name": "testClass",
+      "value": "Staging_project.Tests.Negative.HotTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "StudentRegistrationNameInput"
+    },
+    {
+      "name": "package",
+      "value": "Staging_project.Tests.Negative.HotTests"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "owner",
+      "value": "Nikita Lapin"
+    }
+  ],
+  "links": [
+    {
+      "name": "ISSUE-1",
+      "url": "https://github.com/nunit/docs/issues?utf8=%E2%9C%93&q=ISSUE-1",
+      "type": "issue"
+    }
+  ],
+  "name": "StudentRegistrationNameInput(\"\",\"\",\"40710084\")",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "StudentRegistrationNameInput(\"\",\"\",\"40710084\")"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "StudentRegistrationNameInput(\"\",\"\",\"40710084\")",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "82a764fb7697449f817866d1d73c8a99-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1629287431779,
+      "stop": 1629287435306
+    }
+  ],
+  "attachments": [],
+  "parameters": [
+    {
+      "name": "Param #0",
+      "value": ""
+    },
+    {
+      "name": "Param #1",
+      "value": ""
+    },
+    {
+      "name": "Param #2",
+      "value": "40710084"
+    }
+  ],
+  "start": 1629287431779,
+  "stop": 1629287435307
+}

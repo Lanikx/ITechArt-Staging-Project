@@ -1,0 +1,95 @@
+{
+  "uuid": "5700682b-56da-40af-b8ec-e27fe1dfacf6-tr-0-1015",
+  "historyId": "Staging_project.Tests.Negative.HotTests.StudentRegistrationNameInput(\"\",\"59U3bCDO\",\"\")",
+  "fullName": "Staging_project.Tests.Negative.HotTests.StudentRegistrationNameInput(\"\",\"59U3bCDO\",\"\")",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#6"
+    },
+    {
+      "name": "host",
+      "value": "WIN-50H9I8HAI83"
+    },
+    {
+      "name": "testClass",
+      "value": "Staging_project.Tests.Negative.HotTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "StudentRegistrationNameInput"
+    },
+    {
+      "name": "package",
+      "value": "Staging_project.Tests.Negative.HotTests"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "owner",
+      "value": "Nikita Lapin"
+    }
+  ],
+  "links": [
+    {
+      "name": "ISSUE-1",
+      "url": "https://github.com/nunit/docs/issues?utf8=%E2%9C%93&q=ISSUE-1",
+      "type": "issue"
+    }
+  ],
+  "name": "StudentRegistrationNameInput(\"\",\"59U3bCDO\",\"\")",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "StudentRegistrationNameInput(\"\",\"59U3bCDO\",\"\")"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "StudentRegistrationNameInput(\"\",\"59U3bCDO\",\"\")",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "ba09f263714d4b6ca28a9d4ca58f274f-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1629365803869,
+      "stop": 1629365807834
+    }
+  ],
+  "attachments": [],
+  "parameters": [
+    {
+      "name": "Param #0",
+      "value": ""
+    },
+    {
+      "name": "Param #1",
+      "value": "59U3bCDO"
+    },
+    {
+      "name": "Param #2",
+      "value": ""
+    }
+  ],
+  "start": 1629365803869,
+  "stop": 1629365807835
+}

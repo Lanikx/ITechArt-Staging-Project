@@ -1,0 +1,85 @@
+{
+  "uuid": "dcb4e47c-61b9-4fde-bf31-4c0a6f6b19ba-tr-0-1007",
+  "historyId": "Staging_project.Tests.Positive.CoolTests.MainPageWidgetsTest",
+  "fullName": "Staging_project.Tests.Positive.CoolTests.MainPageWidgetsTest",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "ParallelWorker#5"
+    },
+    {
+      "name": "host",
+      "value": "WIN-50H9I8HAI83"
+    },
+    {
+      "name": "testClass",
+      "value": "Staging_project.Tests.Positive.CoolTests"
+    },
+    {
+      "name": "testMethod",
+      "value": "MainPageWidgetsTest"
+    },
+    {
+      "name": "package",
+      "value": "Staging_project.Tests.Positive.CoolTests"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "owner",
+      "value": "Nikita Lapin"
+    }
+  ],
+  "links": [
+    {
+      "name": "ISSUE-1",
+      "url": "https://github.com/nunit/docs/issues?utf8=%E2%9C%93&q=ISSUE-1",
+      "type": "issue"
+    }
+  ],
+  "name": "MainPageWidgetsTest",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#botton\\-text\\-10\"}\n  (Session info: headless chrome=92.0.4515.159)",
+    "trace": "   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)\r\n   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)\r\n   at Staging_project.Helpers.PageActing.ScrollDown(IWebDriver driver) in E:\\itech\\ITechArt-Staging-Project\\Staging-project\\Staging-project\\Helpers\\PageActing.cs:line 11\r\n   at Staging_project.PageObjects.BasePage..ctor(IWebDriver driver, String pageUrl) in E:\\itech\\ITechArt-Staging-Project\\Staging-project\\Staging-project\\PageObjects\\BasePage.cs:line 15\r\n   at Staging_project.PageObjects.MainPage..ctor(IWebDriver driver) in E:\\itech\\ITechArt-Staging-Project\\Staging-project\\Staging-project\\PageObjects\\MainPage.cs:line 11\r\n   at Staging_project.Tests.Positive.CoolTests.MainPageWidgetsTest() in E:\\itech\\ITechArt-Staging-Project\\Staging-project\\Staging-project\\Tests\\Positive\\CoolTests.cs:line 112"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "MainPageWidgetsTest",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#botton\\-text\\-10\"}\n  (Session info: headless chrome=92.0.4515.159)",
+        "trace": "   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)\r\n   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)\r\n   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)\r\n   at Staging_project.Helpers.PageActing.ScrollDown(IWebDriver driver) in E:\\itech\\ITechArt-Staging-Project\\Staging-project\\Staging-project\\Helpers\\PageActing.cs:line 11\r\n   at Staging_project.PageObjects.BasePage..ctor(IWebDriver driver, String pageUrl) in E:\\itech\\ITechArt-Staging-Project\\Staging-project\\Staging-project\\PageObjects\\BasePage.cs:line 15\r\n   at Staging_project.PageObjects.MainPage..ctor(IWebDriver driver) in E:\\itech\\ITechArt-Staging-Project\\Staging-project\\Staging-project\\PageObjects\\MainPage.cs:line 11\r\n   at Staging_project.Tests.Positive.CoolTests.MainPageWidgetsTest() in E:\\itech\\ITechArt-Staging-Project\\Staging-project\\Staging-project\\Tests\\Positive\\CoolTests.cs:line 112"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Console Output",
+          "source": "95451503aa9b428aa41215c49da534e1-attachment.txt",
+          "type": "text/plain"
+        }
+      ],
+      "parameters": [],
+      "start": 1629375626941,
+      "stop": 1629375630014
+    }
+  ],
+  "attachments": [],
+  "parameters": [],
+  "start": 1629375626941,
+  "stop": 1629375630014
+}
