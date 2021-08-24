@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<root>
+	<promptbox>
+		<input>Some kind of ghost</input>
+		<result>You entered Some kind of ghost</result>
+	</promptbox>
+</root>
