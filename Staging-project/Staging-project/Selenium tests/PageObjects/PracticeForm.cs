@@ -1,111 +1,77 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Interactions;
-using OpenQA.Selenium.Support.UI;
-using Staging_project.Helpers;
-using System;
+using OpenQA.Selenium.Support.PageObjects;
 
 namespace Staging_project.PageObjects
 {
     class PracticeForm : BasePage
     {
+        public const string URL = "https://demoqa.com/automation-practice-form";
 
-        IWebElement firstNameField;
+        [FindsBy(How = How.Id, Using = "firstName")]
+        private IWebElement firstNameField;
+        [FindsBy(How = How.Id, Using = "lastName")]
+        private IWebElement lastNameField;
+        [FindsBy(How = How.XPath, Using = ".//input[@id = 'userNumber']")]
+        private IWebElement numberField;
+        [FindsBy(How = How.XPath, Using = ".//div/button[@id = 'submit']")]
+        private IWebElement submitButton;
+        [FindsBy(How = How.XPath, Using = ".//label[@for = 'gender-radio-0']")]
+        private IWebElement maleGenderCheck;
+        [FindsBy(How = How.XPath, Using = ".//label[@for = 'gender-radio-1']")]
+        private IWebElement femaleGenderCheck;
+        [FindsBy(How = How.XPath, Using = ".//label[@for = 'gender-radio-2']")]
+        private IWebElement otherGenderCheck;
+        [FindsBy(How = How.ClassName, Using = "modal-content")]
+        private IWebElement modalContent;
 
-        IWebElement lastNameField;
-
-        IWebElement numberField;
-
-        IWebElement submitButton;
-
-        public PracticeForm(IWebDriver driver) : base(driver, "https://demoqa.com/automation-practice-form")
+        public PracticeForm(IWebDriver driver) : base(driver, URL)
         {
-
+            
         }
 
 
-
-
-
-        public PracticeForm EnterName(string name)
+        public bool ModalContentExists()
         {
-            firstNameField = driver.FindElement(By.Id("firstName"));
-            if (IsAtPage())
-            {
-                firstNameField.SendKeys(name);
-            }
-
-            return this;
+            return modalContent != null;
         }
 
-        public PracticeForm EnterLastName(string lastName)
-        {
-            lastNameField = driver.FindElement(By.Id("lastName"));
-            if (IsAtPage())
-            {
-                lastNameField.SendKeys(lastName);
-            }
 
-            return this;
+        public void EnterName(string name)
+        {
+            firstNameField.SendKeys(name);
         }
 
-        public PracticeForm CheckGender(int checkId)
+        public void EnterLastName(string lastName)
         {
-            if (IsAtPage())
-            {
-                driver.FindElement(By.XPath(".//label[@for = 'gender-radio-" + checkId + "']")).Click();
-            }
-
-            return this;
+            lastNameField.SendKeys(lastName);
         }
 
-        public PracticeForm EnterNumber(string number)
+        public void CheckMaleGender() 
         {
-            numberField = driver.FindElement(By.XPath(".//input[@id = 'userNumber']"));
-            if (IsAtPage())
-            {
-                numberField.SendKeys(number);
-            }
-
-            return this;
+            maleGenderCheck.Click();
         }
 
-        internal bool IsSomethingInvalid()
+        public void CheckFemaleGender() 
         {
-            var wait = new WebDriverWait(driver, new TimeSpan(0, 0, 5));
-            return wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementExists(By.CssSelector(".form-control.is-invalid, .was-validated .form-control:invalid"))) != null;
+            femaleGenderCheck.Click();
         }
 
-        private bool IsAtPage()
+        public void CheckOtherGender() 
         {
-            if (driver.Url == "https://demoqa.com/automation-practice-form")
-            {
-                return true;
-            }
-
-            return false;
+            otherGenderCheck.Click();
         }
 
-        public void EnterData(string name, string lastName, int gender, string number)
+
+        public void EnterNumber(string number)
         {
-            EnterName(name);
-            EnterLastName(lastName);
-            CheckGender(gender);
-            EnterNumber(number);
+            numberField.SendKeys(number);
         }
 
-        public void EnterData(string name, string lastName, string number)
-        {
-            EnterName(name);
-            EnterLastName(lastName);
-            EnterNumber(number);
-        }
 
         internal void PressSubmit()
-        {submitButton = driver.FindElement(By.XPath(".//div/button[@id = 'submit']"));
-            PageActing.ScrollDown(driver);
+        {
             submitButton.Click();
-
         }
-       
+
     }
 }

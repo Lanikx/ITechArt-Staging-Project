@@ -1,71 +1,72 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Support.PageObjects;
 using System.Collections.Generic;
 
 namespace Staging_project.PageObjects
 {
     class TextBoxPage : BasePage
-    {       
+    {
 
-        IWebElement nameField;
+        public const string URL = "https://demoqa.com/text-box";
 
-        IWebElement emailField;
+        [FindsBy(How = How.XPath, Using = "//div/input[@id = 'userName']")]
+        private IWebElement nameField;
+        [FindsBy(How = How.XPath, Using = "//div/input[@id = 'userEmail']")]
+        private IWebElement emailField;
+        [FindsBy(How = How.XPath, Using = "//div/textarea[@id = 'currentAddress']")]
+        private IWebElement currentAddressField;
+        [FindsBy(How = How.XPath, Using = "//div/textarea[@id = 'permanentAddress']")]
+        private IWebElement permanentAddressField;
+        [FindsBy(How = How.XPath, Using = "//div/button[@id = 'submit']")]
+        private IWebElement submitButton;
+        [FindsBy(How = How.XPath, Using = "//div/p[@id = 'email']")]
+        private IWebElement outputEmail;
+        [FindsBy(How = How.XPath, Using = "//div/p[@id = 'name']")]
+        private IWebElement outputName;
 
-        IWebElement currentAddressField;
 
-        IWebElement permanentAddressField;
-
-        IWebElement submitButton;
-
-        private readonly string outputXPath = "//div/p[@id = 'name']|//div/p[@id = 'email']";
-
-        public TextBoxPage(IWebDriver driver) : base(driver, "https://demoqa.com/text-box")
+        public TextBoxPage(IWebDriver driver) : base(driver, URL)
         {
 
         }
 
 
-        public TextBoxPage EnterName(string name)
+        public void EnterName(string name)
         {
-            nameField = driver.FindElement(By.XPath("//div/input[@id = 'userName']"));
-            if (IsOnPage("https://demoqa.com/text-box"))
             nameField.SendKeys(name);
-            return this;
         }
 
-        public TextBoxPage EnterEmail(string email)
+        public void EnterEmail(string email)
         {
-            emailField = driver.FindElement(By.XPath("//div/input[@id = 'userEmail']"));
             emailField.SendKeys(email);
-            return this;
         }
 
-        public TextBoxPage EnterCurrentAddress(string currentAddress)
+        public void EnterCurrentAddress(string currentAddress)
         {
-            currentAddressField = driver.FindElement(By.XPath("//div/textarea[@id = 'currentAddress']"));
             currentAddressField.SendKeys(currentAddress);
-            return this;
         }
 
-        public TextBoxPage EnterPermanentAddress(string permanentAddress)
+        public void EnterPermanentAddress(string permanentAddress)
         {
-            permanentAddressField = driver.FindElement(By.XPath("//div/textarea[@id = 'permanentAddress']"));
             permanentAddressField.SendKeys(permanentAddress);
-            return this;
         }
 
-        public TextBoxPage PressSubmit()
+        public void PressSubmit()
         {
-            submitButton = driver.FindElement(By.XPath("//div/button[@id = 'submit']"));
             submitButton.Click();
-            return this;
         }
 
-        public List<IWebElement> GetOutputList()
+        public string GetNameOutput()
         {
-            List<IWebElement> list = new List<IWebElement>();
-            list.AddRange(driver.FindElements(By.XPath(outputXPath)));
-            return list;
+            return outputEmail.Text;
         }
+        
+        public string GetEmailOutput()
+        {
+            return outputName.Text;
+        }
+
+       
 
 
 

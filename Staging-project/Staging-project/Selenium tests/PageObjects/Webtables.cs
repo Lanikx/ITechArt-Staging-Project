@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
@@ -8,24 +9,24 @@ namespace Staging_project.PageObjects
 {
     class WebTables : BasePage
     {
-        IWebElement addButton;
+        public const string URL = "https://demoqa.com/webtables";
 
-        readonly string submitXPath = "//button[@id = 'submit']";
+        [FindsBy(How = How.Id, Using = "addNewRecordButton")]
+        private IWebElement addButton;
+        [FindsBy(How = How.XPath, Using = "//button[@id = 'submit']")]
+        private IWebElement submitButton;
 
-        public WebTables(IWebDriver driver) : base(driver, "https://demoqa.com/webtables") { }
+        public WebTables(IWebDriver driver) : base(driver, URL) { }
 
 
-        public WebTables PressAddButton()
+        public void PressAddButton()
         {
-            addButton = driver.FindElement(By.Id("addNewRecordButton"));
             addButton.Click();
-            return this;
         }
 
-        public WebTables PressSubmitButton()
+        public void PressSubmitButton()
         {
-            driver.FindElement(By.XPath(submitXPath)).Click();
-            return this;
+            submitButton.Click();
         }
     }
 }

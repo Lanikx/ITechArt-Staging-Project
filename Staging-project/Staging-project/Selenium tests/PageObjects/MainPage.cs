@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Support.PageObjects;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,8 +8,22 @@ namespace Staging_project.PageObjects
 {
     class MainPage : BasePage
     {
+        public const string URL = "https://demoqa.com/";
 
-        public MainPage(IWebDriver driver) : base(driver, "https://demoqa.com/")
+        [FindsBy(How =How.XPath, Using = "//h5[@text = 'Elements']")]
+        private IWebElement elementsButton;
+        [FindsBy(How = How.XPath, Using = "//h5[@text = 'Forms']")]
+        private IWebElement formsButton;
+        [FindsBy(How = How.XPath, Using = "//h5[@text = 'Alerts, Frame & Windows']")]
+        private IWebElement alertsFrameWindowsButton;
+        [FindsBy(How = How.XPath, Using = "//h5[@text = 'Widgets']")]
+        private IWebElement widgetsButton;
+        [FindsBy(How = How.XPath, Using = "//h5[@text = 'Interactions']")]
+        private IWebElement interactionsButton;
+        [FindsBy(How = How.XPath, Using = "//h5[@text = 'Book Store Application']")]
+        private IWebElement bookStoreButton;
+
+        public MainPage(IWebDriver driver) : base(driver, URL)
         {
 
         }
@@ -17,39 +32,32 @@ namespace Staging_project.PageObjects
         
         public void ClickElementsButton()
         {
-            if (IsOnPage("https://demoqa.com/"))
-                driver.FindElements(By.XPath("//div[@class = 'category-cards']/div"))[0].Click(); 
+            elementsButton.Click();
         }
-
 
         public void ClickFormsButton()
         {
-            if (IsOnPage("https://demoqa.com/"))
-                driver.FindElements(By.XPath("//div[@class = 'category-cards']/div"))[1].Click();
+            formsButton.Click();
         }
 
         public void ClickAlertsFrameWindowsButton()
         {
-            if (IsOnPage("https://demoqa.com/"))
-                driver.FindElements(By.XPath("//div[@class = 'category-cards']/div"))[2].Click();
+            alertsFrameWindowsButton.Click();
         }
 
         public void ClickWidgetsButton()
         {
-            if (IsOnPage("https://demoqa.com/"))
-                driver.FindElements(By.XPath("//div[@class = 'category-cards']/div"))[3].Click();
+            widgetsButton.Click();
         }
 
         public void ClickInteractionsButton()
         {
-            if (IsOnPage("https://demoqa.com/"))
-                driver.FindElements(By.XPath("//div[@class = 'category-cards']/div"))[4].Click();
+            interactionsButton.Click();
         }
 
         public void ClickBookStoreButton()
         {
-            if (IsOnPage("https://demoqa.com/"))
-            driver.FindElements(By.XPath("//div[@class = 'category-cards']/div"))[5].Click();
+            bookStoreButton.Click();
         }
 
 

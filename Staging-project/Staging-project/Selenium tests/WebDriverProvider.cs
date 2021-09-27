@@ -24,7 +24,7 @@ namespace Staging_project.Tests
             ChromeOptions options = new ChromeOptions();
             options.AddArgument("--headless");
             options.AddArgument("disable-gpu");
-            _storedDriver.Value = new ChromeDriver(@"E:\", options);
+            _storedDriver.Value = new ChromeDriver(@"./", options);
         }
 
 

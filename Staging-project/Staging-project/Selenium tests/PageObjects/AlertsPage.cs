@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Support.PageObjects;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,18 +8,22 @@ namespace Staging_project.PageObjects
 {
     class AlertsPage: BasePage
     {
+        public const string URL = "https://demoqa.com/alerts";
 
+        [FindsBy(How = How.XPath, Using = "//*[@class = 'col']/button[@id = 'alertButton']")]
         private IWebElement alertButton;
-
+        [FindsBy(How = How.XPath, Using = "//*[@class = 'col']/button[@id = 'timerAlertButton']")]
         private IWebElement delayAlertButton;
-
+        [FindsBy(How = How.XPath, Using = "//*[@class = 'col']/button[@id = 'confirmButton']")]
         private IWebElement confirmAlertButton;
-
+        [FindsBy(How = How.XPath, Using = "//*[@class = 'col']/button[@id = 'promtButton']")]
         private IWebElement promptBoxButton;
-
+        [FindsBy(How = How.XPath, Using = "//span[@id = 'promptResult']")]
+        private IWebElement promptResult;
+        
         private IAlert alert;
 
-        public AlertsPage(IWebDriver driver) : base(driver, "https://demoqa.com/alerts")
+        public AlertsPage(IWebDriver driver) : base(driver, URL)
         {
            
         }
@@ -26,29 +31,21 @@ namespace Staging_project.PageObjects
 
         public void AlertButtonClick()
         {
-            alertButton = driver.FindElement(By.XPath("//*[@class = 'col']/button[@id = 'alertButton']"));
-            if (IsOnPage("https://demoqa.com/alerts"))
                 alertButton.Click();
         }
 
         public void DelayAlertButtonClick()
         {
-            delayAlertButton = driver.FindElement(By.XPath("//*[@class = 'col']/button[@id = 'timerAlertButton']"));
-            if (IsOnPage("https://demoqa.com/alerts"))
                 delayAlertButton.Click();
         }
 
         public void ConfirmAlertButtonClick()
         {
-            confirmAlertButton = driver.FindElement(By.XPath("//*[@class = 'col']/button[@id = 'confirmButton']"));
-            if (IsOnPage("https://demoqa.com/alerts"))
                 confirmAlertButton.Click();
         }
         
         public void PromptBoxButtonClick()
         {
-            promptBoxButton = driver.FindElement(By.XPath("//*[@class = 'col']/button[@id = 'promtButton']"));
-            if (IsOnPage("https://demoqa.com/alerts"))
                 promptBoxButton.Click();
         }
         
@@ -56,7 +53,7 @@ namespace Staging_project.PageObjects
 
         public string GetPromptResult()
         {
-            return driver.FindElement(By.XPath("//span[@id = 'promptResult']")).Text;
+            return promptResult.Text;
         }
 
         public void AlertAccept()

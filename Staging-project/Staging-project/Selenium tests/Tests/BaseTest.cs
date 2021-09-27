@@ -2,7 +2,8 @@
 using Staging_project.Helpers;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-
+using WebDriverManager.DriverConfigs.Impl;
+using WebDriverManager;
 
 namespace Staging_project.Tests
 {
@@ -28,7 +29,8 @@ namespace Staging_project.Tests
         [OneTimeSetUp]
         public void AndHereItGoes()
         {
-            data = XMLRead.ReadFile(@"E:\itech\ITechArt-Staging-Project\Staging-project\Staging-project\Selenium tests\Tests\InputData.xml");
+            new DriverManager().SetUpDriver(new ChromeConfig());
+            data = XMLRead.ReadFile(@"./Selenium tests\Tests\InputData.xml");
         }
     }
 }

@@ -3,10 +3,7 @@ using NUnit.Allure.Attributes;
 using NUnit.Allure.Core;
 using NUnit.Framework;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
-using Staging_project.Helpers;
 using Staging_project.PageObjects;
-using System;
 
 namespace Staging_project.Tests.Positive
 {
@@ -25,9 +22,7 @@ namespace Staging_project.Tests.Positive
         public void PromptBoxAlertTest()
         {
             AlertsPage alertsPage = new AlertsPage(provider.driver);
-            PageActing.CloseAd(provider.driver);
             alertsPage.PromptBoxButtonClick();
-            PageActing.AlertExists(provider.driver);
             alertsPage.AlertEnter(data[0].ToString());
             alertsPage.AlertAccept();
             Assert.That(alertsPage.GetPromptResult() == data[1].ToString());
@@ -41,12 +36,10 @@ namespace Staging_project.Tests.Positive
         public void TextBoxEnterTest()
         {
             TextBoxPage textBoxPage = new TextBoxPage(provider.driver);
-            textBoxPage
-                .EnterName("Cockpit Sergeevich")
-                    .EnterEmail("ding@dong.com");
-            PageActing.ScrollDown(provider.driver);
-                        textBoxPage.PressSubmit();
-            Assert.That(textBoxPage.GetOutputList()[0].Text + textBoxPage.GetOutputList()[1].Text == "Name:Cockpit SergeevichEmail:ding@dong.com");
+            textBoxPage.EnterName("Cockpit Sergeevich");
+            textBoxPage.EnterEmail("ding@dong.com");
+            textBoxPage.PressSubmit();
+            Assert.That(textBoxPage.GetNameOutput() + textBoxPage.GetEmailOutput() == "Name:Cockpit SergeevichEmail:ding@dong.com");
         }
 
         [Test]
@@ -57,12 +50,12 @@ namespace Staging_project.Tests.Positive
         public void PracticeFormTest()
         {
             PracticeForm practiceForm = new PracticeForm(provider.driver);
-            practiceForm.EnterName("Nikita")
-                    .EnterLastName("Lapin")
-                        .CheckGender(2)
-                            .EnterNumber("0123456789")
-                                .PressSubmit();
-            Assert.That(PageActing.ElementExists(By.ClassName("modal-content"), provider.driver));  
+            practiceForm.EnterName("Nikita");
+            practiceForm.EnterLastName("Lapin");
+            practiceForm.CheckMaleGender();
+            practiceForm.EnterNumber("0123456789");
+            practiceForm.PressSubmit();
+            Assert.That(practiceForm.ModalContentExists());
         }
 
         [Test]
@@ -73,9 +66,8 @@ namespace Staging_project.Tests.Positive
         public void MainPageElementsTest()
         {
             MainPage mainpage = new MainPage(provider.driver);
-            PageActing.CloseAd(provider.driver);
-            mainpage
-                .ClickElementsButton();
+            mainpage.CloseAd();
+            mainpage.ClickElementsButton();
             Assert.That(provider.driver.Url == "https://demoqa.com/elements");
         }
 
@@ -88,9 +80,8 @@ namespace Staging_project.Tests.Positive
         {
 
             MainPage mainpage = new MainPage(provider.driver);
-            PageActing.CloseAd(provider.driver);
-            mainpage
-                .ClickFormsButton();
+            mainpage.CloseAd();
+            mainpage.ClickFormsButton();
             Assert.That(provider.driver.Url == "https://demoqa.com/forms");
         }
 
@@ -102,9 +93,8 @@ namespace Staging_project.Tests.Positive
         public void MainPageAlertsFramesWindowsTest()
         {
             MainPage mainpage = new MainPage(provider.driver);
-            mainpage
-                .ClickAlertsFrameWindowsButton();
-            Assert.That(provider.driver.Url == "https://demoqa.com/alertsWindows");
+            mainpage.ClickAlertsFrameWindowsButton();
+            Assert.That(provider.driver.Url == AlertsPage.URL);
         }
 
         [Test]
@@ -115,8 +105,7 @@ namespace Staging_project.Tests.Positive
         public void MainPageWidgetsTest()
         {
             MainPage mainpage = new MainPage(provider.driver);
-            mainpage
-                .ClickWidgetsButton();
+            mainpage.ClickWidgetsButton();
             Assert.That(provider.driver.Url == "https://demoqa.com/widgets");
         }
 
@@ -128,8 +117,7 @@ namespace Staging_project.Tests.Positive
         public void MainPageInteractionsTest()
         {
             MainPage mainpage = new MainPage(provider.driver);
-            mainpage
-                .ClickInteractionsButton();
+            mainpage.ClickInteractionsButton();
             Assert.That(provider.driver.Url == "https://demoqa.com/interaction");
 
         }
@@ -143,8 +131,7 @@ namespace Staging_project.Tests.Positive
         public void MainPageBookStoreTest()
         {
             MainPage mainpage = new MainPage(provider.driver);
-            mainpage
-                .ClickBookStoreButton();
+            mainpage.ClickBookStoreButton();
             Assert.That(provider.driver.Url == "https://demoqa.com/books");
         }
 

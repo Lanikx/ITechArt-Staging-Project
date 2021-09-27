@@ -1,63 +1,40 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using OpenQA.Selenium.Support.PageObjects;
 
 namespace Staging_project.PageObjects
 {
     class LoginPage : BasePage
     {
-
-        IWebElement userName;
-        IWebElement password;
-        IWebElement login;
+        public const string URL = "https://demoqa.com/login";
 
 
-        public LoginPage(IWebDriver driver) : base(driver, "https://demoqa.com/login") { }
+        [FindsBy(How = How.Id, Using = "userName")]
+        private IWebElement userName;
+        [FindsBy(How = How.Id, Using = "password")]
+        private IWebElement password;
+        [FindsBy(How = How.Id, Using = "login")]
+        private IWebElement login;
 
 
-        public LoginPage Login(string userName, string password)
+        public LoginPage(IWebDriver driver) : base(driver, URL) { }
+
+
+        public void EnterPassword(string password)
         {
-            if (IsOnPage("https://demoqa.com/login"))
-            {
-                EnterPassword(password);
-                EnterUserName(userName);
-            }
-            return this;
+            this.password.SendKeys(password);
         }
 
-        public LoginPage EnterPassword(string password)
+        public void EnterUserName(string userName)
         {
-            if (IsOnPage("https://demoqa.com/login"))
-            {
-                this.password = driver.FindElement(By.Id("password"));
-                this.password.SendKeys(password);
-            }
-            return this;
+            this.userName.SendKeys(userName);
         }
 
-        public LoginPage EnterUserName(string userName)
-        {
-            if (IsOnPage("https://demoqa.com/login"))
-            {
-                this.userName = driver.FindElement(By.Id("userName"));
-                this.userName.SendKeys(userName);
-            }
-            return this;
-        }
-       
 
-        public LoginPage PressLogin()
+        public void PressLogin()
         {
-            this.login = driver.FindElement(By.Id("login"));
-            if (IsOnPage("https://demoqa.com/login"))
-            {
-                login.Click();
-            }
-            return this;
+            login.Click();
         }
 
-       
+
     }
 }
