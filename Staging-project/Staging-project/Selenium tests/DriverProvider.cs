@@ -8,7 +8,7 @@ namespace Staging_project.Selenium_tests.Steps
     public class DriverProvider
     {
 
-        private static ThreadLocal<IWebDriver> _storedDriver = new ThreadLocal<IWebDriver>();
+        private static readonly ThreadLocal<IWebDriver> _storedDriver = new ThreadLocal<IWebDriver>();
 
         public IWebDriver GetDriver()
         {
@@ -17,8 +17,10 @@ namespace Staging_project.Selenium_tests.Steps
                 ChromeOptions options = new ChromeOptions();
                 //options.addArguments("--headless");
                 //options.addArguments("disable-gpu");
-                _storedDriver.Value = new ChromeDriver(@"D:\PracticeTasks\ITechArt-Staging-Project\Staging-project\Staging-project\", options);
-                _storedDriver.Value.Url = MainPage.URL;
+                _storedDriver.Value = new ChromeDriver(@"D:\PracticeTasks\ITechArt-Staging-Project\Staging-project\Staging-project\", options)
+                {
+                    Url = MainPage.URL
+                };
             }
             return _storedDriver.Value;
         }

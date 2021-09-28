@@ -1,0 +1,8 @@
+﻿alert.input=Some kind of ghost
+alert.output=You entered Some kind of ghost
+textbox.name=Cockpit Sergeevich
+textbox.email=ding@dong.com
+textbox.output=Name:Cockpit SergeevichEmail:ding@dong.com
+practiceform.name=Nikita
+practiceform.lastname=Lapin
+practiceform.number=0123456789

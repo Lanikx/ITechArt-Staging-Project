@@ -9,42 +9,42 @@ namespace Staging_project.Selenium_tests.PageObjects
     public abstract class AlertsFramesWindowsPageGroup : BasePage
     {
 
-        protected IWebElement browserWindowsButton { get { return driver.FindElement(By.XPath("//span[text() = 'Browser Windows']")); } }
+        protected IWebElement BrowserWindowsButton { get { return driver.FindElement(By.XPath("//span[text() = 'Browser Windows']")); } }
 
-        protected IWebElement alertsButton { get { return driver.FindElement(By.XPath("//span[text() = 'Alerts']")); } }
+        protected IWebElement AlertsButton { get { return driver.FindElement(By.XPath("//span[text() = 'Alerts']")); } }
 
-        protected IWebElement framesButton { get { return driver.FindElement(By.XPath("//span[text() = 'Frames']")); } }
+        protected IWebElement FramesButton { get { return driver.FindElement(By.XPath("//span[text() = 'Frames']")); } }
 
-        protected IWebElement nestedFramesButton { get { return driver.FindElement(By.XPath("//span[text() = 'Nested Frames']")); } }
+        protected IWebElement NestedFramesButton { get { return driver.FindElement(By.XPath("//span[text() = 'Nested Frames']")); } }
 
-        protected IWebElement modalDialogsButton { get { return driver.FindElement(By.XPath("//span[text() = 'Modal Dialogs']")); } }
+        protected IWebElement ModalDialogsButton { get { return driver.FindElement(By.XPath("//span[text() = 'Modal Dialogs']")); } }
 
         public AlertsFramesWindowsPageGroup(IWebDriver driver) :base(driver)
         { }
 
         public void ClickBrowserWindowsButton()
         {
-            browserWindowsButton.Click();
+            BrowserWindowsButton.Click();
         }
 
         public void ClickAlertsButton()
         {
-            alertsButton.Click();
+            AlertsButton.Click();
         }
 
         public void ClickFramesButton()
         {
-            framesButton.Click();
+            FramesButton.Click();
         }
 
         public void ClickNestedFragmentsButton()
         {
-            nestedFramesButton.Click();
+            NestedFramesButton.Click();
         }
 
         public void ClickModalDialogsButton()
         {
-            modalDialogsButton.Click();
+            ModalDialogsButton.Click();
         }
     }
 }

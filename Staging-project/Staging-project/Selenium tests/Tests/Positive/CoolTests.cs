@@ -25,8 +25,8 @@ namespace Staging_project.Tests.Positive
             user.atMainPage.GoToAlertsFramesWindowsPage();
             user.atAlertsFramesPage.GoToAlertsPage();
             user.atAlertsPage.PromptBoxButtonClick();
-            user.atAlertsPage.InputAlert("Some kind of ghost");
-            user.atAlertsPage.AssertAlertInput("You entered Some kind of ghost");
+            user.atAlertsPage.InputAlert(data["alert.input"]);
+            user.atAlertsPage.AssertAlertInput(data["alert.output"]);
         }
 
         [Test]
@@ -38,8 +38,8 @@ namespace Staging_project.Tests.Positive
         {
             user.atMainPage.GoToElementsPage();
             user.atElementsPage.GoToTextBoxPage();
-            user.atTextBoxPage.SubmitData("Cockpit Sergeevich", "ding@dong.com");
-            user.atTextBoxPage.AssertOutput("Name:Cockpit SergeevichEmail:ding@dong.com");
+            user.atTextBoxPage.SubmitData(data["textbox.name"], data["textbox.email"]);
+            user.atTextBoxPage.AssertOutput(data["textbox.output"]);
         }
 
         [Test]
@@ -51,7 +51,7 @@ namespace Staging_project.Tests.Positive
         {
             user.atMainPage.GoToFormsPage();
             user.atFormsPage.GoToPracticeFormPage();
-            user.atPracticeFormPage.EnterData("Nikita", "Lapin", Gender.Male, "0123456789");
+            user.atPracticeFormPage.EnterData(data["practiceform.name"], data["practiceform.lastname"], Gender.Male, data["practiceform.number"]);
             user.atPracticeFormPage.AssertModalContentExists();
         }
 
