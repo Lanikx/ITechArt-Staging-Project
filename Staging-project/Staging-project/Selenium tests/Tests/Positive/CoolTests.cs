@@ -24,6 +24,7 @@ namespace Staging_project.Tests.Positive
         {
             user.atMainPage.GoToAlertsFramesWindowsPage();
             user.atAlertsFramesPage.GoToAlertsPage();
+            user.atAlertsPage.PromptBoxButtonClick();
             user.atAlertsPage.InputAlert("Some kind of ghost");
             user.atAlertsPage.AssertAlertInput("You entered Some kind of ghost");
         }
@@ -37,7 +38,7 @@ namespace Staging_project.Tests.Positive
         {
             user.atMainPage.GoToElementsPage();
             user.atElementsPage.GoToTextBoxPage();
-            user.atTextBoxPage.SubmitData("", "");
+            user.atTextBoxPage.SubmitData("Cockpit Sergeevich", "ding@dong.com");
             user.atTextBoxPage.AssertOutput("Name:Cockpit SergeevichEmail:ding@dong.com");
         }
 

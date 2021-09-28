@@ -27,19 +27,15 @@ namespace Staging_project.PageObjects
         {
             return driver.Url.Equals(pageUrl);
         }
-
-        public BasePage(IWebDriver driver, string pageUrl)
+        internal void ScrollPageDown()
         {
-            this.driver = driver;
-            this.driver.Url = pageUrl;
-            
+            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+            js.ExecuteScript("window.scrollTo(0, document.body.scrollHeight);");
         }
 
         public BasePage(IWebDriver driver)
         {
             this.driver = driver;
-            this.driver.Url = MainPage.URL;
-
         }
 
     }

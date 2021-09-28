@@ -1,4 +1,6 @@
-﻿namespace Staging_project.Selenium_tests.Steps
+﻿using NUnit.Framework;
+
+namespace Staging_project.Selenium_tests.Steps
 {
     public class AtBookStorePage
     {
@@ -14,13 +16,13 @@
 
         public void goToLoginPage()
         {
-            atPage.clickLoginPage();
+            atPage.ClickLoginButton();
 
         }
 
         public void ConfirmAtBookStorePage()
         {
-            assert atPage.IsOnPage(atPage.URL);
+            Assert.That(atPage.IsOnPage(BookStorePage.URL));
         }
     }
 }

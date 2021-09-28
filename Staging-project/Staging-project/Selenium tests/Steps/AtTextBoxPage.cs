@@ -6,17 +6,25 @@ namespace Staging_project.Selenium_tests.Steps
 {
     public class AtTextBoxPage
     {
-        TextBoxPage textBoxPage;
+        private TextBoxPage atPage;
+        
 
-        internal void SubmitData(string v1, string v2)
+        public AtTextBoxPage(TextBoxPage page)
         {
-            textBoxPage.EnterName(v1);
-            textBoxPage.EnterEmail(v2);
+            this.atPage = page;
         }
 
-        internal void AssertOutput()
+        internal void SubmitData(string name, string email)
         {
-           // Assert.That(textBoxPage.GetNameOutput() + textBoxPage.GetEmailOutput() == "Name:Cockpit SergeevichEmail:ding@dong.com");
+            atPage.EnterName(name);
+            atPage.EnterEmail(email);
+            atPage.ClickSubmit();
+        }
+
+        internal void AssertOutput(string expectedOutput)
+        {
+            var output = atPage.GetNameOutput() + atPage.GetEmailOutput();
+           Assert.That(output == expectedOutput);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Staging_project.PageObjects;
+﻿using NUnit.Framework;
+using Staging_project.PageObjects;
 
 namespace Staging_project.Selenium_tests.Steps
 {

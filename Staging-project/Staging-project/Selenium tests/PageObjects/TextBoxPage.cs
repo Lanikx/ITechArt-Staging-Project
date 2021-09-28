@@ -1,9 +1,10 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
+using Staging_project.Selenium_tests.PageObjects;
 
 namespace Staging_project.PageObjects
 {
-    class TextBoxPage : BasePage
+    public class TextBoxPage : ElementsPageGroup
     {
 
         public const string URL = "https://demoqa.com/text-box";
@@ -12,7 +13,7 @@ namespace Staging_project.PageObjects
         {
             get
             {
-                return driver.FindElement(By.XPath("//div/input[@id = 'userName']"));
+                return driver.FindElement(By.Id("userName"));
             }
         }
 
@@ -20,7 +21,7 @@ namespace Staging_project.PageObjects
         {
             get
             {
-                return driver.FindElement(By.XPath("//div/input[@id = 'userEmail']"));
+                return driver.FindElement(By.Id("userEmail"));
             }
         }
 
@@ -28,7 +29,7 @@ namespace Staging_project.PageObjects
         {
             get
             {
-                return driver.FindElement(By.XPath("//div/textarea[@id = 'currentAddress']"));
+                return driver.FindElement(By.XPath("//div/textarea[id() = 'currentAddress']"));
             }
         }
 
@@ -36,7 +37,7 @@ namespace Staging_project.PageObjects
         {
             get
             {
-                return driver.FindElement(By.XPath("//div/textarea[@id = 'permanentAddress']"));
+                return driver.FindElement(By.XPath("//div/textarea[id() = 'permanentAddress']"));
             }
         }
 
@@ -65,7 +66,7 @@ namespace Staging_project.PageObjects
         }
 
 
-        public TextBoxPage(IWebDriver driver) : base(driver, URL)
+        public TextBoxPage(IWebDriver driver) : base(driver)
         {
 
         }
@@ -91,19 +92,19 @@ namespace Staging_project.PageObjects
             permanentAddressField.SendKeys(permanentAddress);
         }
 
-        public void PressSubmit()
+        public void ClickSubmit()
         {
             submitButton.Click();
         }
 
         public string GetNameOutput()
         {
-            return outputEmail.Text;
+            return outputName.Text;
         }
 
         public string GetEmailOutput()
         {
-            return outputName.Text;
+            return outputEmail.Text; 
         }
 
 

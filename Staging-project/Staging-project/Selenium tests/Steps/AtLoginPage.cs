@@ -13,7 +13,7 @@ namespace Staging_project.Selenium_tests.Steps
         }
 
 
-        public void Login(String login, String password)
+        public void Login(string login, string password)
         {
             loginPage.EnterPassword(password);
             loginPage.EnterUserName(login);

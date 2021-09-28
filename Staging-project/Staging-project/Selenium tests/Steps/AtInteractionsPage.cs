@@ -1,4 +1,6 @@
-﻿namespace Staging_project.Selenium_tests.Steps
+﻿using NUnit.Framework;
+
+namespace Staging_project.Selenium_tests.Steps
 {
     public class AtInteractionsPage
     {

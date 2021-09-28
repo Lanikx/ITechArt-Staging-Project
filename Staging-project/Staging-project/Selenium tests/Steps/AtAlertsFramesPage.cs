@@ -16,12 +16,12 @@ namespace Staging_project.Selenium_tests.Steps
 
         public void confirmAtAlertsFramesPage()
         {
-            Assert.That(atPage.IsOnPage(atPage.URL));
+            Assert.That(atPage.IsOnPage(AlertsFramesPage.URL));
         }
 
-        internal void GoToAlertsPage()
+        public void GoToAlertsPage()
         {
-            throw new NotImplementedException();
+            atPage.ClickAlertsButton();
         }
     }
 }

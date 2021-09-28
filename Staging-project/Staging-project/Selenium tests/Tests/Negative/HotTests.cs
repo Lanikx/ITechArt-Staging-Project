@@ -23,6 +23,7 @@ namespace Staging_project.Tests.Negative
             user.atMainPage.GoToElementsPage();
             user.atElementsPage.GoToWebTablesPage();
             user.atWebTablesPage.Add();
+            user.atWebTablesPage.Submit();
             user.atWebTablesPage.AssertAddFailed();
         }
 
@@ -33,11 +34,10 @@ namespace Staging_project.Tests.Negative
         [AllureOwner("Nikita Lapin")]
         public void LoginPageNoInputTest()
         {
-            user.atMainPage.
-            LoginPage loginPage = new LoginPage(provider.driver);
-            loginPage.CloseAd();
-            loginPage.PressLogin();
-            Assert.That(loginPage.IsSomethingInvalid);
+            user.atMainPage.GoToBookStorePage();
+            user.atBookStorePage.goToLoginPage();
+            user.atLoginPage.Login("", "");
+            user.atLoginPage.assertLoginFailed();
         }
 
         [Test]
@@ -47,9 +47,10 @@ namespace Staging_project.Tests.Negative
         [AllureOwner("Nikita Lapin")]
         public void StudentRegistrationNoInputTest()
         {
-            PracticeForm practiceForm = new PracticeForm(provider.driver);
-            practiceForm.PressSubmit();
-            Assert.That(practiceForm.IsSomethingInvalid());
+            user.atMainPage.GoToFormsPage();
+            user.atFormsPage.GoToPracticeFormPage();
+            user.atPracticeFormPage.EnterData("", "", Selenium_tests.Helpers.Gender.Other, "");
+            user.atPracticeFormPage.AssertSomethingIsInvalid();
         }
 
         //[Test]

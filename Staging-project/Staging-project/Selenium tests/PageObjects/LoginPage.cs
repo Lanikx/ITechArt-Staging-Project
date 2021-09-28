@@ -1,19 +1,20 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
+using Staging_project.Selenium_tests.PageObjects;
 
 namespace Staging_project.PageObjects
 {
-    class LoginPage : BasePage
+    public class LoginPage : BookStoreApplicationPageGroup
     {
         public const string URL = "https://demoqa.com/login";
 
 
-        [FindsBy(How = How.Id, Using = "userName")]
+        
         private IWebElement userName
         {
             get
             {
-                return driver.FindElement(By.Id("userName"));
+                return driver.FindElement(By.CssSelector("#userName.mr-sm-2.form-control"));
             }
         }
         
@@ -21,7 +22,7 @@ namespace Staging_project.PageObjects
         {
             get
             {
-                return driver.FindElement(By.Id("password"));
+                return driver.FindElement(By.CssSelector("#password.mr-sm-2.form-control"));
             }
         }
         
@@ -34,7 +35,7 @@ namespace Staging_project.PageObjects
         }
 
 
-        public LoginPage(IWebDriver driver) : base(driver, URL) { }
+        public LoginPage(IWebDriver driver) : base(driver) { }
 
 
         public void EnterPassword(string password)
@@ -48,11 +49,15 @@ namespace Staging_project.PageObjects
         }
 
 
-        public void PressLogin()
+        public void PressLoginButton()
         {
             login.Click();
         }
 
+        public bool FailedFieldExists()
+        {
+           return this.IsSomethingInvalid();
+        }
 
     }
 }

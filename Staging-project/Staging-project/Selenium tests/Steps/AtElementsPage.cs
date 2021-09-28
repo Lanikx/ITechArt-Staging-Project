@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NUnit.Framework;
+using System;
 
 namespace Staging_project.Selenium_tests.Steps
 {
@@ -19,7 +20,12 @@ namespace Staging_project.Selenium_tests.Steps
 
         internal void GoToTextBoxPage()
         {
-            throw new NotImplementedException();
+            atPage.ClickTextBoxButton();
+        }
+
+        internal void GoToWebTablesPage()
+        {
+            atPage.ClickWebTablesButton();
         }
     }
 }

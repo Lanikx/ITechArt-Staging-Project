@@ -1,12 +1,13 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
+using Staging_project.Selenium_tests.PageObjects;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Staging_project.PageObjects
 {
-    public class AlertsPage: BasePage
+    public class AlertsPage : AlertsFramesWindowsPageGroup
     {
         public const string URL = "https://demoqa.com/alerts";
 
@@ -48,13 +49,13 @@ namespace Staging_project.PageObjects
         {
             get
             {
-                return driver.FindElement(By.XPath("//*[@class = 'col']/button[@id = 'alertButton']"));
+                return driver.FindElement(By.Id("promptResult"));
             }
         }
 
         private IAlert alert;
 
-        public AlertsPage(IWebDriver driver) : base(driver, URL)
+        public AlertsPage(IWebDriver driver) : base(driver)
         {
            
         }
@@ -97,7 +98,6 @@ namespace Staging_project.PageObjects
         public void AlertEnter(string enter)
         {
             alert = driver.SwitchTo().Alert();
-            if(alert != null)
             alert.SendKeys(enter);
            
         }

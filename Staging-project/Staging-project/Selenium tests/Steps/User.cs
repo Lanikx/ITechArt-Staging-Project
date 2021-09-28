@@ -20,6 +20,7 @@ namespace Staging_project.Selenium_tests.Steps
         public AtAlertsPage atAlertsPage;
         public AtTextBoxPage atTextBoxPage;
         public AtPracticeFormPage atPracticeFormPage;
+        public AtWebTablesPage atWebTablesPage;
 
         public User()
         {
@@ -37,6 +38,10 @@ namespace Staging_project.Selenium_tests.Steps
             atFormsPage = new AtFormsPage(pageProvider.InitPage<FormsPage>());
             atInteractionsPage = new AtInteractionsPage(pageProvider.InitPage<InteractionsPage>());
             atWidgetsPage = new AtWidgetsPage(pageProvider.InitPage<WidgetsPage>());
+            atAlertsPage = new AtAlertsPage(pageProvider.InitPage<AlertsPage>());
+            atTextBoxPage = new AtTextBoxPage(pageProvider.InitPage<TextBoxPage>());
+            atPracticeFormPage = new AtPracticeFormPage(pageProvider.InitPage<PracticeFormPage>());
+            atWebTablesPage = new AtWebTablesPage(pageProvider.InitPage<WebTablesPage>());
         }
     }
 

@@ -1,4 +1,5 @@
-﻿using Staging_project.PageObjects;
+﻿using OpenQA.Selenium;
+using Staging_project.PageObjects;
 
 namespace Staging_project.Selenium_tests.Steps
 {
@@ -7,9 +8,10 @@ namespace Staging_project.Selenium_tests.Steps
         public string URL = "https://demoqa.com/interaction";
 
 
-
         public InteractionsPage(IWebDriver driver) : base(driver)
         { 
         }
+
+
     }
 }

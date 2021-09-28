@@ -19,7 +19,10 @@ namespace Staging_project.Selenium_tests.Steps
             Assert.That(atPage.IsOnPage(AlertsPage.URL));
         }
 
-
+        public void PromptBoxButtonClick()
+        {
+            atPage.PromptBoxButtonClick();
+        }
 
         internal void InputAlert(string input)
         {

@@ -12,26 +12,24 @@ namespace Staging_project.Tests
     {
         protected User user;
 
-        protected WebDriverProvider provider = new WebDriverProvider();
-
         protected object[] data;
 
         [SetUp]
         public void AhShitHereWeGoAgain()
         {
-            provider.Start();
+            user = new User(new PageProvider());
         }
 
         [TearDown]
         public void YouHadToFollowTheDamnTrainCJ()
         {
-            provider.Quit();
+            user.pageProvider.Quit();
         }
 
         [OneTimeSetUp]
         public void AndHereItGoes()
         {
-            new DriverManager().SetUpDriver(new ChromeConfig());
+            
            
         }
     }

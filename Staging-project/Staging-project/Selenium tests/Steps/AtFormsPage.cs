@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NUnit.Framework;
+using System;
 
 namespace Staging_project.Selenium_tests.Steps
 {
@@ -14,12 +15,12 @@ namespace Staging_project.Selenium_tests.Steps
 
         public void ConfirmAtFormsPage()
         {
-            Assert.That( atPage.IsOnPage(atPage.URL));
+            Assert.That( atPage.IsOnPage(FormsPage.URL));
         }
 
         internal void GoToPracticeFormPage()
         {
-            throw new NotImplementedException();
+            atPage.ClickPracticeFormButton();
         }
     }
 }

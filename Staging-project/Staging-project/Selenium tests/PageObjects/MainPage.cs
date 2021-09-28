@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.PageObjects;
 using System;
 using System.Collections.Generic;
@@ -15,7 +16,7 @@ namespace Staging_project.PageObjects
         {
             get
             {
-                return driver.FindElement(By.XPath("//h5[@text = 'Elements']"));
+                return driver.FindElement(By.XPath("//h5[text() = 'Elements']"));
             }
         }
 
@@ -23,7 +24,7 @@ namespace Staging_project.PageObjects
         {
             get
             {
-                return driver.FindElement(By.XPath("//h5[@text = 'Forms']"));
+                return driver.FindElement(By.XPath("//h5[text() = 'Forms']"));
             }
         }
 
@@ -31,7 +32,7 @@ namespace Staging_project.PageObjects
         {
             get
             {
-                return driver.FindElement(By.XPath("//h5[@text = 'Alerts, Frame & Windows']"));
+                return driver.FindElement(By.XPath("//h5[text() = 'Alerts, Frame & Windows']"));
             }
         }
 
@@ -39,15 +40,17 @@ namespace Staging_project.PageObjects
         {
             get
             {
-                return driver.FindElement(By.XPath("//h5[@text = 'Widgets']"));
+                return driver.FindElement(By.XPath("//h5[text() = 'Widgets']"));
             }
         }
+
+        
 
         private IWebElement interactionsButton
         {
             get
             {
-                return driver.FindElement(By.XPath("//h5[@text = 'Interactions']"));
+                return driver.FindElement(By.XPath("//h5[text() = 'Interactions']"));
             }
         }
        
@@ -55,17 +58,17 @@ namespace Staging_project.PageObjects
         {
             get
             {
-                return driver.FindElement(By.XPath("//h5[@text = 'Book Store Application']"));
+                return driver.FindElement(By.XPath("//h5[text() = 'Book Store Application']"));
             }
         }
 
-        public MainPage(IWebDriver driver) : base(driver, URL)
+        public MainPage(IWebDriver driver) : base(driver)
         {
 
         }
 
-
         
+
         public void ClickElementsButton()
         {
             elementsButton.Click();

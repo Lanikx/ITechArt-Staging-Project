@@ -1,4 +1,5 @@
-﻿using Staging_project.PageObjects;
+﻿using NUnit.Framework;
+using Staging_project.PageObjects;
 using Staging_project.Selenium_tests.Helpers;
 using System;
 
@@ -6,16 +7,38 @@ namespace Staging_project.Selenium_tests.Steps
 {
     public class AtPracticeFormPage
     {
-        PracticeForm practiceForm;
+        PracticeFormPage atPage;
+        
 
-        internal void EnterData(string v1, string v2, Gender gender, string v3)
+        public AtPracticeFormPage(PracticeFormPage page)
         {
-            throw new NotImplementedException();
+            this.atPage = page;
+        }
+
+        internal void EnterData(string name, string lastName, Gender gender, string number)
+        {
+            
+            atPage.EnterName(name);
+            atPage.EnterLastName(lastName);
+            switch (gender)
+            {
+                case Gender.Female: atPage.CheckFemaleGender(); break;
+                case Gender.Male: atPage.CheckMaleGender(); break;
+                case Gender.Other: atPage.CheckOtherGender(); break;
+            }
+            atPage.EnterNumber(number);
+            atPage.ScrollPageDown();
+            atPage.PressSubmit();
         }
 
         internal void AssertModalContentExists()
         {
-            throw new NotImplementedException();
+            Assert.That(atPage.ModalContentExists());
+        }
+
+        internal void AssertSomethingIsInvalid()
+        {
+            Assert.That(atPage.IsSomethingInvalid());
         }
     }
 }
