@@ -9,11 +9,29 @@ namespace Staging_project.PageObjects
 
 
         [FindsBy(How = How.Id, Using = "userName")]
-        private IWebElement userName;
-        [FindsBy(How = How.Id, Using = "password")]
-        private IWebElement password;
-        [FindsBy(How = How.Id, Using = "login")]
-        private IWebElement login;
+        private IWebElement userName
+        {
+            get
+            {
+                return driver.FindElement(By.Id("userName"));
+            }
+        }
+        
+        private IWebElement password
+        {
+            get
+            {
+                return driver.FindElement(By.Id("password"));
+            }
+        }
+        
+        private IWebElement login
+        {
+            get
+            {
+                return driver.FindElement(By.Id("login"));
+            }
+        }
 
 
         public LoginPage(IWebDriver driver) : base(driver, URL) { }

@@ -6,21 +6,52 @@ using System.Text;
 
 namespace Staging_project.PageObjects
 {
-    class AlertsPage: BasePage
+    public class AlertsPage: BasePage
     {
         public const string URL = "https://demoqa.com/alerts";
 
-        [FindsBy(How = How.XPath, Using = "//*[@class = 'col']/button[@id = 'alertButton']")]
-        private IWebElement alertButton;
-        [FindsBy(How = How.XPath, Using = "//*[@class = 'col']/button[@id = 'timerAlertButton']")]
-        private IWebElement delayAlertButton;
-        [FindsBy(How = How.XPath, Using = "//*[@class = 'col']/button[@id = 'confirmButton']")]
-        private IWebElement confirmAlertButton;
-        [FindsBy(How = How.XPath, Using = "//*[@class = 'col']/button[@id = 'promtButton']")]
-        private IWebElement promptBoxButton;
-        [FindsBy(How = How.XPath, Using = "//span[@id = 'promptResult']")]
-        private IWebElement promptResult;
         
+        private IWebElement alertButton 
+        { 
+            get 
+            {
+                return driver.FindElement(By.XPath("//*[@class = 'col']/button[@id = 'alertButton']"));    
+            } 
+        }
+
+       
+        private IWebElement delayAlertButton
+        {
+            get
+            {
+                return driver.FindElement(By.XPath("//*[@class = 'col']/button[@id = 'timerAlertButton']"));
+            }
+        }
+       
+        private IWebElement confirmAlertButton
+        {
+            get
+            {
+                return driver.FindElement(By.XPath("//*[@class = 'col']/button[@id = 'confirmButton']"));
+            }
+        }
+        
+        private IWebElement promptBoxButton
+        {
+            get
+            {
+                return driver.FindElement(By.XPath("//*[@class = 'col']/button[@id = 'promtButton']"));
+            }
+        }
+        
+        private IWebElement promptResult
+        {
+            get
+            {
+                return driver.FindElement(By.XPath("//*[@class = 'col']/button[@id = 'alertButton']"));
+            }
+        }
+
         private IAlert alert;
 
         public AlertsPage(IWebDriver driver) : base(driver, URL)

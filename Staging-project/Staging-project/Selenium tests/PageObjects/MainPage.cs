@@ -6,22 +6,58 @@ using System.Text;
 
 namespace Staging_project.PageObjects
 {
-    class MainPage : BasePage
+    public class MainPage : BasePage
     {
-        public const string URL = "https://demoqa.com/";
+        public static readonly string URL = "https://demoqa.com/";
 
-        [FindsBy(How =How.XPath, Using = "//h5[@text = 'Elements']")]
-        private IWebElement elementsButton;
-        [FindsBy(How = How.XPath, Using = "//h5[@text = 'Forms']")]
-        private IWebElement formsButton;
-        [FindsBy(How = How.XPath, Using = "//h5[@text = 'Alerts, Frame & Windows']")]
-        private IWebElement alertsFrameWindowsButton;
-        [FindsBy(How = How.XPath, Using = "//h5[@text = 'Widgets']")]
-        private IWebElement widgetsButton;
-        [FindsBy(How = How.XPath, Using = "//h5[@text = 'Interactions']")]
-        private IWebElement interactionsButton;
-        [FindsBy(How = How.XPath, Using = "//h5[@text = 'Book Store Application']")]
-        private IWebElement bookStoreButton;
+
+        private IWebElement elementsButton
+        {
+            get
+            {
+                return driver.FindElement(By.XPath("//h5[@text = 'Elements']"));
+            }
+        }
+
+        private IWebElement formsButton
+        {
+            get
+            {
+                return driver.FindElement(By.XPath("//h5[@text = 'Forms']"));
+            }
+        }
+
+        private IWebElement alertsFrameWindowsButton
+        {
+            get
+            {
+                return driver.FindElement(By.XPath("//h5[@text = 'Alerts, Frame & Windows']"));
+            }
+        }
+
+        private IWebElement widgetsButton
+        {
+            get
+            {
+                return driver.FindElement(By.XPath("//h5[@text = 'Widgets']"));
+            }
+        }
+
+        private IWebElement interactionsButton
+        {
+            get
+            {
+                return driver.FindElement(By.XPath("//h5[@text = 'Interactions']"));
+            }
+        }
+       
+        private IWebElement bookStoreButton
+        {
+            get
+            {
+                return driver.FindElement(By.XPath("//h5[@text = 'Book Store Application']"));
+            }
+        }
 
         public MainPage(IWebDriver driver) : base(driver, URL)
         {

@@ -6,7 +6,7 @@ using System;
 
 namespace Staging_project.PageObjects
 {
-    class BasePage
+    public class BasePage
     { 
         protected  IWebDriver driver;
 
@@ -23,11 +23,23 @@ namespace Staging_project.PageObjects
                 ad.Click();
         }
 
+        public bool IsOnPage(string pageUrl)
+        {
+            return driver.Url.Equals(pageUrl);
+        }
+
         public BasePage(IWebDriver driver, string pageUrl)
         {
             this.driver = driver;
             this.driver.Url = pageUrl;
             
+        }
+
+        public BasePage(IWebDriver driver)
+        {
+            this.driver = driver;
+            this.driver.Url = MainPage.URL;
+
         }
 
     }

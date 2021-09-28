@@ -1,6 +1,5 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.PageObjects;
-using System.Collections.Generic;
 
 namespace Staging_project.PageObjects
 {
@@ -9,20 +8,61 @@ namespace Staging_project.PageObjects
 
         public const string URL = "https://demoqa.com/text-box";
 
-        [FindsBy(How = How.XPath, Using = "//div/input[@id = 'userName']")]
-        private IWebElement nameField;
-        [FindsBy(How = How.XPath, Using = "//div/input[@id = 'userEmail']")]
-        private IWebElement emailField;
-        [FindsBy(How = How.XPath, Using = "//div/textarea[@id = 'currentAddress']")]
-        private IWebElement currentAddressField;
-        [FindsBy(How = How.XPath, Using = "//div/textarea[@id = 'permanentAddress']")]
-        private IWebElement permanentAddressField;
-        [FindsBy(How = How.XPath, Using = "//div/button[@id = 'submit']")]
-        private IWebElement submitButton;
-        [FindsBy(How = How.XPath, Using = "//div/p[@id = 'email']")]
-        private IWebElement outputEmail;
-        [FindsBy(How = How.XPath, Using = "//div/p[@id = 'name']")]
-        private IWebElement outputName;
+        private IWebElement nameField
+        {
+            get
+            {
+                return driver.FindElement(By.XPath("//div/input[@id = 'userName']"));
+            }
+        }
+
+        private IWebElement emailField
+        {
+            get
+            {
+                return driver.FindElement(By.XPath("//div/input[@id = 'userEmail']"));
+            }
+        }
+
+        private IWebElement currentAddressField
+        {
+            get
+            {
+                return driver.FindElement(By.XPath("//div/textarea[@id = 'currentAddress']"));
+            }
+        }
+
+        private IWebElement permanentAddressField
+        {
+            get
+            {
+                return driver.FindElement(By.XPath("//div/textarea[@id = 'permanentAddress']"));
+            }
+        }
+
+        private IWebElement submitButton
+        {
+            get
+            {
+                return driver.FindElement(By.XPath("//div/button[@id = 'submit']"));
+            }
+        }
+
+        private IWebElement outputEmail
+        {
+            get
+            {
+                return driver.FindElement(By.XPath("//div/p[@id = 'email']"));
+            }
+        }
+
+        private IWebElement outputName
+        {
+            get
+            {
+                return driver.FindElement(By.XPath("//div/p[@id = 'name']"));
+            }
+        }
 
 
         public TextBoxPage(IWebDriver driver) : base(driver, URL)
@@ -60,13 +100,13 @@ namespace Staging_project.PageObjects
         {
             return outputEmail.Text;
         }
-        
+
         public string GetEmailOutput()
         {
             return outputName.Text;
         }
 
-       
+
 
 
 

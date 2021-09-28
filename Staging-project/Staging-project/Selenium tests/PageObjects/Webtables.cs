@@ -11,10 +11,21 @@ namespace Staging_project.PageObjects
     {
         public const string URL = "https://demoqa.com/webtables";
 
-        [FindsBy(How = How.Id, Using = "addNewRecordButton")]
-        private IWebElement addButton;
-        [FindsBy(How = How.XPath, Using = "//button[@id = 'submit']")]
-        private IWebElement submitButton;
+        private IWebElement addButton
+        {
+            get
+            {
+                return driver.FindElement(By.Id("addNewRecordButton"));
+            }
+        }
+
+        private IWebElement submitButton
+        {
+            get
+            {
+                return driver.FindElement(By.XPath("//button[@id = 'submit']"));
+            }
+        }
 
         public WebTables(IWebDriver driver) : base(driver, URL) { }
 

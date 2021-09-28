@@ -20,11 +20,10 @@ namespace Staging_project.Tests.Negative
         [AllureOwner("Nikita Lapin")]
         public void RegistrationFormNoInputTest()
         {
-            WebTables webTables = new WebTables(provider.driver);
-
-            webTables.PressAddButton();
-            webTables.PressSubmitButton();
-            Assert.That(webTables.IsSomethingInvalid());
+            user.atMainPage.GoToElementsPage();
+            user.atElementsPage.GoToWebTablesPage();
+            user.atWebTablesPage.Add();
+            user.atWebTablesPage.AssertAddFailed();
         }
 
         [Test]
@@ -34,6 +33,7 @@ namespace Staging_project.Tests.Negative
         [AllureOwner("Nikita Lapin")]
         public void LoginPageNoInputTest()
         {
+            user.atMainPage.
             LoginPage loginPage = new LoginPage(provider.driver);
             loginPage.CloseAd();
             loginPage.PressLogin();

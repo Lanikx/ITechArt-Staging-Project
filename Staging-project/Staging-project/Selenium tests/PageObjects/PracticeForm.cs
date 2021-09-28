@@ -7,22 +7,70 @@ namespace Staging_project.PageObjects
     {
         public const string URL = "https://demoqa.com/automation-practice-form";
 
-        [FindsBy(How = How.Id, Using = "firstName")]
-        private IWebElement firstNameField;
-        [FindsBy(How = How.Id, Using = "lastName")]
-        private IWebElement lastNameField;
-        [FindsBy(How = How.XPath, Using = ".//input[@id = 'userNumber']")]
-        private IWebElement numberField;
-        [FindsBy(How = How.XPath, Using = ".//div/button[@id = 'submit']")]
-        private IWebElement submitButton;
-        [FindsBy(How = How.XPath, Using = ".//label[@for = 'gender-radio-0']")]
-        private IWebElement maleGenderCheck;
-        [FindsBy(How = How.XPath, Using = ".//label[@for = 'gender-radio-1']")]
-        private IWebElement femaleGenderCheck;
-        [FindsBy(How = How.XPath, Using = ".//label[@for = 'gender-radio-2']")]
-        private IWebElement otherGenderCheck;
-        [FindsBy(How = How.ClassName, Using = "modal-content")]
-        private IWebElement modalContent;
+
+        private IWebElement firstNameField
+        {
+            get
+            {
+                return driver.FindElement(By.Id("firstName"));
+            }
+        }
+
+        private IWebElement lastNameField
+        {
+            get
+            {
+                return driver.FindElement(By.Id("lastName"));
+            }
+        }
+
+        private IWebElement numberField
+        {
+            get
+            {
+                return driver.FindElement(By.XPath(".//input[@id = 'userNumber']"));
+            }
+        }
+
+        private IWebElement submitButton
+        {
+            get
+            {
+                return driver.FindElement(By.XPath(".//div/button[@id = 'submit']"));
+            }
+        }
+
+        private IWebElement maleGenderCheck
+        {
+            get
+            {
+                return driver.FindElement(By.XPath(".//label[@for = 'gender-radio-0']"));
+            }
+        }
+
+        private IWebElement femaleGenderCheck
+        {
+            get
+            {
+                return driver.FindElement(By.XPath(".//label[@for = 'gender-radio-1']"));
+            }
+        }
+
+        private IWebElement otherGenderCheck
+        {
+            get
+            {
+                return driver.FindElement(By.XPath(".//label[@for = 'gender-radio-2']"));
+            }
+        }
+
+        private IWebElement modalContent
+        {
+            get
+            {
+                return driver.FindElement(By.ClassName("modal-content"));
+            }
+        }
 
         public PracticeForm(IWebDriver driver) : base(driver, URL)
         {

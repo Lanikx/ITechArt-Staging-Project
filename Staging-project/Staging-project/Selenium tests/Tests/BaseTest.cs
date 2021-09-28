@@ -4,11 +4,13 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using WebDriverManager.DriverConfigs.Impl;
 using WebDriverManager;
+using Staging_project.Selenium_tests.Steps;
 
 namespace Staging_project.Tests
 {
     class BaseTest
     {
+        protected User user;
 
         protected WebDriverProvider provider = new WebDriverProvider();
 
@@ -30,7 +32,7 @@ namespace Staging_project.Tests
         public void AndHereItGoes()
         {
             new DriverManager().SetUpDriver(new ChromeConfig());
-            data = XMLRead.ReadFile(@"./Selenium tests\Tests\InputData.xml");
+           
         }
     }
 }

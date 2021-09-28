@@ -4,6 +4,7 @@ using NUnit.Allure.Core;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using Staging_project.PageObjects;
+using Staging_project.Selenium_tests.Helpers;
 
 namespace Staging_project.Tests.Positive
 {
@@ -21,11 +22,10 @@ namespace Staging_project.Tests.Positive
         [AllureOwner("Nikita Lapin")]
         public void PromptBoxAlertTest()
         {
-            AlertsPage alertsPage = new AlertsPage(provider.driver);
-            alertsPage.PromptBoxButtonClick();
-            alertsPage.AlertEnter(data[0].ToString());
-            alertsPage.AlertAccept();
-            Assert.That(alertsPage.GetPromptResult() == data[1].ToString());
+            user.atMainPage.GoToAlertsFramesWindowsPage();
+            user.atAlertsFramesPage.GoToAlertsPage();
+            user.atAlertsPage.InputAlert("Some kind of ghost");
+            user.atAlertsPage.AssertAlertInput("You entered Some kind of ghost");
         }
 
         [Test]
@@ -35,11 +35,10 @@ namespace Staging_project.Tests.Positive
         [AllureOwner("Nikita Lapin")]
         public void TextBoxEnterTest()
         {
-            TextBoxPage textBoxPage = new TextBoxPage(provider.driver);
-            textBoxPage.EnterName("Cockpit Sergeevich");
-            textBoxPage.EnterEmail("ding@dong.com");
-            textBoxPage.PressSubmit();
-            Assert.That(textBoxPage.GetNameOutput() + textBoxPage.GetEmailOutput() == "Name:Cockpit SergeevichEmail:ding@dong.com");
+            user.atMainPage.GoToElementsPage();
+            user.atElementsPage.GoToTextBoxPage();
+            user.atTextBoxPage.SubmitData("", "");
+            user.atTextBoxPage.AssertOutput("Name:Cockpit SergeevichEmail:ding@dong.com");
         }
 
         [Test]
@@ -49,13 +48,10 @@ namespace Staging_project.Tests.Positive
         [AllureOwner("Nikita Lapin")]
         public void PracticeFormTest()
         {
-            PracticeForm practiceForm = new PracticeForm(provider.driver);
-            practiceForm.EnterName("Nikita");
-            practiceForm.EnterLastName("Lapin");
-            practiceForm.CheckMaleGender();
-            practiceForm.EnterNumber("0123456789");
-            practiceForm.PressSubmit();
-            Assert.That(practiceForm.ModalContentExists());
+            user.atMainPage.GoToFormsPage();
+            user.atFormsPage.GoToPracticeFormPage();
+            user.atPracticeFormPage.EnterData("Nikita", "Lapin", Gender.Male, "0123456789");
+            user.atPracticeFormPage.AssertModalContentExists();
         }
 
         [Test]
@@ -65,10 +61,8 @@ namespace Staging_project.Tests.Positive
         [AllureOwner("Nikita Lapin")]
         public void MainPageElementsTest()
         {
-            MainPage mainpage = new MainPage(provider.driver);
-            mainpage.CloseAd();
-            mainpage.ClickElementsButton();
-            Assert.That(provider.driver.Url == "https://demoqa.com/elements");
+            user.atMainPage.GoToElementsPage();
+            user.atElementsPage.ConfirmAtElementsPage();
         }
 
         [Test]
@@ -78,11 +72,8 @@ namespace Staging_project.Tests.Positive
         [AllureOwner("Nikita Lapin")]
         public void MainPageFormsTest()
         {
-
-            MainPage mainpage = new MainPage(provider.driver);
-            mainpage.CloseAd();
-            mainpage.ClickFormsButton();
-            Assert.That(provider.driver.Url == "https://demoqa.com/forms");
+            user.atMainPage.GoToFormsPage();
+            user.atFormsPage.ConfirmAtFormsPage();
         }
 
         [Test]
@@ -92,9 +83,8 @@ namespace Staging_project.Tests.Positive
         [AllureOwner("Nikita Lapin")]
         public void MainPageAlertsFramesWindowsTest()
         {
-            MainPage mainpage = new MainPage(provider.driver);
-            mainpage.ClickAlertsFrameWindowsButton();
-            Assert.That(provider.driver.Url == AlertsPage.URL);
+            user.atMainPage.GoToAlertsFramesWindowsPage();
+            user.atAlertsFramesPage.confirmAtAlertsFramesPage();
         }
 
         [Test]
@@ -104,9 +94,8 @@ namespace Staging_project.Tests.Positive
         [AllureOwner("Nikita Lapin")]
         public void MainPageWidgetsTest()
         {
-            MainPage mainpage = new MainPage(provider.driver);
-            mainpage.ClickWidgetsButton();
-            Assert.That(provider.driver.Url == "https://demoqa.com/widgets");
+            user.atMainPage.GoToWidgetsPage();
+            user.atWidgetsPage.ConfirmAtWidgetsPage();
         }
 
         [Test]
@@ -116,10 +105,8 @@ namespace Staging_project.Tests.Positive
         [AllureOwner("Nikita Lapin")]
         public void MainPageInteractionsTest()
         {
-            MainPage mainpage = new MainPage(provider.driver);
-            mainpage.ClickInteractionsButton();
-            Assert.That(provider.driver.Url == "https://demoqa.com/interaction");
-
+            user.atMainPage.GoToInteractionsPage();
+            user.atInteractionsPage.ConfirmAtInteractionsPage();
         }
 
 
@@ -130,9 +117,8 @@ namespace Staging_project.Tests.Positive
         [AllureOwner("Nikita Lapin")]
         public void MainPageBookStoreTest()
         {
-            MainPage mainpage = new MainPage(provider.driver);
-            mainpage.ClickBookStoreButton();
-            Assert.That(provider.driver.Url == "https://demoqa.com/books");
+            user.atMainPage.GoToBookStorePage();
+            user.atBookStorePage.ConfirmAtBookStorePage();
         }
 
 
